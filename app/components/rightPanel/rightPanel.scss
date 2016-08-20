@@ -5,10 +5,11 @@
 .rightIcons {
     margin: 10px 0;
     cursor: pointer;
+    color: $text-gray;
 }
 
 .rightIcons:hover {
-    opacity: 0.6;
+    color: $text-white;
 }
 
 .closeBtn {
@@ -17,11 +18,15 @@
     left: 10px;
 }
 
-.animalList {}
+.animalList {
+  height: calc(100% - 80px);
+  overflow: scroll;
+  background-color: #0a2232;
+}
 
 .animalWrap {
     display: flex;
-    margin: 10px 0;
+    padding: 8px 0;
 }
 
 .animalWrap.top {
@@ -59,7 +64,9 @@
 }
 
 .rightPhotoName {
-  font-size: 20px
+  font-size: 18px;
+  line-height: 24px;
+  color: $text-white;
 }
 
 .rightPhotoWrap .header {
@@ -68,7 +75,8 @@
 }
 
 .rightPhotoWrap .description {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .rightPanelWrap {
@@ -78,11 +86,9 @@
 
 .panelTitle {
     display: flex;
-    padding: 30px 0;
     background-color: #183a5d;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    height: 80px;
+    color: $text-white;
 }
 
 .rightActionBtnWrap {
@@ -107,5 +113,34 @@
   background-repeat: no-repeat !important;
   margin: auto 10px;
   border-radius: 75px;
-  border: 2px solid;
+  border: 2px solid $text-white;
+  background-position: center;
+}
+
+.right-animal-diamond {
+  color: #5cbcff;
+}
+
+.right-animal-cost {
+  color: #5cbcff;
+}
+
+.right-animal-info {
+  color: $text-dark;
+  &:hover {
+    color: $text-white;
+  }
+}
+
+#infoModal {
+  .info-modal-header {
+    background-color: #183a5d;
+    color: $text-white;
+  }
+  .info-modal-content {
+    background-color: #0a2232;
+    .ui.header {
+      color: $text-white;
+    }
+  }
 }

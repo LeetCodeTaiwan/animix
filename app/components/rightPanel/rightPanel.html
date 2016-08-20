@@ -12,29 +12,29 @@
             <div class="rightTitle">SHOP</div>
         </div>
         <div class="animalList">
-            <div class="animalWrap top">
-            </div>
+            <!-- <div class="animalWrap top"></div> -->
             <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals" ng-click="rightPanelCtrl.buyAnimal(animal)">
-                <div class="rightPanelImageWrap" style="background: url('images/{{animal.img}}')">
+                <div class="rightPanelImageWrap" style="background-image: url('images/{{animal.img}}')">
                 </div>
                 <div class="rightPhotoWrap">
                     <div class="rightPhotoName">
                         {{animal.name}}
                     </div>
                     <div class="description">
-                        <p><i class="diamond icon white"></i>{{animal.cost}}</p>
+                        <i class="diamond icon right-animal-diamond"></i>
+                        <span class="right-animal-cost">{{animal.cost}}</span>
                     </div>
                 </div>
                 <div class="rightActionBtnWrap">
-                    <i class="ui circle info icon cursor big" ng-click="rightPanelCtrl.checkInfo(animal); $event.stopPropagation();"></i>
+                    <i class="ui circle info icon cursor big right-animal-info" ng-click="rightPanelCtrl.checkInfo(animal); $event.stopPropagation();"></i>
                 </div>
             </div>
             <div class="ui modal" id="infoModal">
                 <i class="close icon"></i>
-                <div class="header">
+                <div class="header info-modal-header">
                     動物護照
                 </div>
-                <div class="image content">
+                <div class="image content info-modal-content">
                     <div class="ui medium image">
                         <img ng-src="images/{{rightPanelCtrl.currentAnimal.img}}">
                     </div>
