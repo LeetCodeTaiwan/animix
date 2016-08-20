@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6407b48c8004d6438edf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "cccce0ca4e8a3c44d69c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -37077,7 +37077,7 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var LeftPanelController = function () {
-	    function LeftPanelController(animals) {
+	    function LeftPanelController(animals, $http) {
 	        _classCallCheck(this, LeftPanelController);
 	
 	        this.zooItems = [{
@@ -37105,6 +37105,7 @@
 	        }];
 	        this.ownAnimals = animals;
 	        this.currentAnimal = {};
+	        this.fetch = $http;
 	    }
 	
 	    _createClass(LeftPanelController, [{
@@ -37117,19 +37118,34 @@
 	        value: function openUpgradeModal(animal) {
 	            this.currentAnimal = animal;
 	            $('#upgradeModal').modal('show');
+	            var req = {
+	                method: 'POST',
+	                url: 'http://hackntu-nodered.mybluemix.net/start-talking/',
+	                headers: {
+	                    "Access-Control-Allow-Origin": "*",
+	                    "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+	                    "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+	                },
+	                data: { "type": animal.code }
+	            };
 	
-	            $http({
-	                method: 'GET',
-	                url: 'http://hackntu-nodered.mybluemix.net/start-talking'
-	            }).then(function successCallback(response) {
-	                // this callback will be called asynchronously
-	                // when the response is available
-	                console.log(response);
-	            }, function errorCallback(response) {
-	                // called asynchronously if an error occurs
-	                // or server returns response with an error status.
-	                alert('http get errorCallback');
+	            this.fetch(req).then(function (response) {
+	                alert(response);
+	            }, function () {
+	                alert('error');
 	            });
+	            // fetch({
+	            //         method: 'POST',
+	            //         url: 'http://hackntu-nodered.mybluemix.net/start-talking'
+	            //     }).then(function successCallback(response) {
+	            //         // this callback will be called asynchronously
+	            //         // when the response is available
+	            //         console.log(response);
+	            //     }, function errorCallback(response) {
+	            //         // called asynchronously if an error occurs
+	            //         // or server returns response with an error status.
+	            //         alert('http get errorCallback');
+	            //     });
 	        }
 	    }]);
 	
