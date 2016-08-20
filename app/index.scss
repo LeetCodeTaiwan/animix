@@ -1,12 +1,18 @@
 // Imports will go here to import other component's style.
 // This allows for sharing of global variables.
 @import 'bourbon';
+// @import 'https://fonts.googleapis.com/css?family=Baloo+Bhaina';
+
 @import "~components/hero/hero.scss";
 @import "~components/home/home.scss";
 @import "~common/button/button.scss";
 @import "~common/navbar/navbar.scss";
 @import "~components/leftPanel/leftPanel.scss";
 @import "~components/rightPanel/rightPanel.scss";
+
+* {
+  font-family: 'Baloo Bhaina', cursive;
+}
 
 body {
   color: #EFEFEF;
