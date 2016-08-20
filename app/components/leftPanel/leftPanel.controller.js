@@ -38,7 +38,7 @@ export default class LeftPanelController {
           .modal('show');
         var req = {
             method: 'POST',
-            url: 'http://hackntu-nodered.mybluemix.net/start-talking/',
+            url: '//hackntu-nodered.mybluemix.net/start-talking/',
             headers: {
                 "Access-Control-Allow-Origin" : "*",
                 "Access-Control-Allow-Methods" : "GET,POST,PUT,DELETE,OPTIONS",
