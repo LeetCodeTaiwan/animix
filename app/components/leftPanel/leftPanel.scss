@@ -2,21 +2,35 @@
   
 }
 
-.panel-title {
-	color: #fff;
-	font-size: 2em;
-	line-height: 2em;
-	text-align: center;
+.leftTitle {
+  font-size: 30px;
+  margin: auto;
 }
 
-i.left-icon {
-	font-size: 2em;
-	color: #fff;
+.leftPanelTitle {
+  display: flex;
+  margin: 30px 0;
+}
+
+.leftPhotoWrap {
+    margin-left: 15px;
+}
+
+.leftPhotoWrap .header {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.leftPhotoWrap .attribute {
+    font-size: 15px;
+}
+
+.attr-icon {
 	position: relative;
-	top: 0.5em;
+	top: 5px;
+	width: 22px;
 }
 
-i.left-icon.inner {
-	position: absolute;
-	right: 0;
+.zooImg {
+	width: 100px !important;
 }

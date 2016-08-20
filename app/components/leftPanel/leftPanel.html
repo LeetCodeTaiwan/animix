@@ -1,12 +1,26 @@
 <div class='leftPanel'>
     <i class="archive icon left-icon" ng-click="leftPanelCtrl.openLeftPanel()"></i>
-    <div class="ui wide sidebar inverted vertical menu" id="left-sidebar">
-        <i class="archive icon left-icon inner" ng-click="leftPanelCtrl.openLeftPanel()"></i>
-        <div class="panel-title">ZOO</div>
-        <a class="item" ng-repeat="item in leftPanelCtrl.zooItems">
-            <img ng-src="{{item.img}}" alt="{{item.name}}">
-            <p>{{item.favor}}</p>
-        </a>
-        
+    <div class="ui sidebar inverted vertical menu" id="leftPanel">
+        <div class="leftPanelTitle">
+            <div class="leftTitle">ZOO</div>
+            <i class="ui close large icon cursor" ng-click="leftPanelCtrl.closePanel()"></i>
+        </div>
+        <!-- <a class="item" ng-repeat="item in leftPanelCtrl.ownAnimals">
+            <img class="zooImg" ng-src="{{item.img}}" alt="{{item.name}}">
+            <p>{{item.name}}</p>
+        </a> -->
+        <div class="animalWrap" ng-repeat="animal in leftPanelCtrl.ownAnimals">
+            <img ng-src={{animal.img}}>
+            <div class="leftPhotoWrap">
+                <div class="header">
+                    {{animal.name}}
+                </div>
+                <div class="attribute">
+                    <span><img class="attr-icon" src="http://i.imgur.com/7XAsKFu.png" alt="">: 0</span>
+                    <span><img class="attr-icon" src="http://i.imgur.com/ztfDn80.png" alt="">: 10</span>
+                    <span><img class="attr-icon" src="http://i.imgur.com/qJHPUlh.png" alt="">: 20</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
