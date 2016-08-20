@@ -22,7 +22,8 @@
   background-repeat: no-repeat !important;
   margin: auto 10px;
   border-radius: 75px;
-  border: 2px solid;
+  border: 2px solid $text-white;
+  background-position: center;
 }
 
 .leftPhotoName {
@@ -40,7 +41,7 @@
 
 .leftPhotoWrap .header {
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.875);
+    color: $text-white;
 }
 
 .leftPhotoWrap .attribute {
@@ -75,4 +76,21 @@
 
 .left-attr-column {
   margin-right: 8px;
+}
+
+.left-attr-number {
+  color: $text-gray;
+}
+
+#upgradeModal.modal {
+  .upgrade-modal-header {
+    background-color: #183a5d;
+    color: $text-white;
+  }
+  .upgrade-modal-content {
+    background-color: #0a2232;
+    .ui.header {
+      color: $text-white;
+    }
+  }
 }

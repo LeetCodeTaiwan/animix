@@ -46,13 +46,13 @@ export default class LeftPanelController {
             },
             data: { "type": animal.code }
         };
-        
-        this.fetch(req).then(function(response){
-            alert(response);
-
-        }, function(){
-            alert('error');
-        });
+        //
+        // this.fetch(req).then(function(response){
+        //     alert(response);
+        //
+        // }, function(){
+        //     alert('error');
+        // });
       // fetch({
       //         method: 'POST',
       //         url: 'http://hackntu-nodered.mybluemix.net/start-talking'
