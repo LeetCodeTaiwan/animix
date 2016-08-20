@@ -1,0 +1,55 @@
+.icon {
+  color: white;
+}
+
+.rightIcons {
+  margin: 10px 0;
+}
+
+.closeBtn {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.animalList {
+
+}
+
+.animalWrap {
+  display: flex;
+  margin: 10px 0;
+}
+
+.rightTitle {
+  font-size: 30px;
+  margin: auto;
+}
+
+.rightPhotoWrap {
+  margin-left: 15px;
+}
+
+.rightPanelWrap {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+}
+
+.rightPanelTitle {
+  display: flex;
+  margin: 30px 0;
+}
+
+.rightActionBtnWrap {
+  justify-content: flex-end;
+  margin: auto;
+  flex: 1;
+  display: flex;
+}
+
+.iconWrap {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}

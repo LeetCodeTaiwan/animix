@@ -61,7 +61,7 @@ switch (nodeEnvironment) {
 
     config.entry = {
       bundle: './index.js',
-      vendor: ['angular', 'angular-ui-router', 'lodash']
+      vendor: ['jquery', 'angular', 'angular-ui-router', 'lodash']
     }
     config.devtool = 'source-map';
     break;
