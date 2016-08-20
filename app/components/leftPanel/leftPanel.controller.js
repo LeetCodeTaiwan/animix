@@ -23,7 +23,6 @@ export default class LeftPanelController {
             "favor": 30,
             "productivity": 150,
         }]
-
         this.ownAnimals = animals;
     }
 
@@ -34,5 +33,18 @@ export default class LeftPanelController {
     openUpgradeModal() {
         $('#upgradeModal')
             .modal('show');
-    }
+
+        $http({
+                method: 'GET',
+                url: 'http://hackntu-nodered.mybluemix.net/start-talking'
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                console.log(response);
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                alert('http get errorCallback');
+            });
+        }
 }
