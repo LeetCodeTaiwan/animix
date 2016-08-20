@@ -4,6 +4,11 @@
 
 .rightIcons {
     margin: 10px 0;
+    cursor: pointer;
+}
+
+.rightIcons:hover {
+    opacity: 0.6;
 }
 
 .closeBtn {
@@ -51,12 +56,13 @@
 
 .rightPanelWrap {
   display: flex;
-  height: 90vh;
+  height: 95vh;
 }
 
 .rightPanelTitle {
     display: flex;
-    margin: 30px 0;
+    padding: 30px 0;
+    background-color: #183a5d;
 }
 
 .rightActionBtnWrap {

@@ -36,6 +36,14 @@ export default class RightPanelController {
             .sidebar('toggle')
     }
 
+    toggleLeftPanel() {
+        $('#leftPanel')
+            .sidebar('setting', 'dimPage', false)
+            .sidebar('setting', 'closable', false)
+            .sidebar('setting', 'transition', 'overlay')
+            .sidebar('toggle')
+    }
+
     closePanel() {
         $('#rightPanel').sidebar('hide')
     }
