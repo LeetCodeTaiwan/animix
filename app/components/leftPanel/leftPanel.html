@@ -8,19 +8,28 @@
             <img class="zooImg" ng-src="{{item.img}}" alt="{{item.name}}">
             <p>{{item.name}}</p>
         </a> -->
-        <div class="animalWrap top">
-        </div>
-        <div class="animalWrap" ng-repeat="animal in leftPanelCtrl.ownAnimals" ng-click="leftPanelCtrl.openUpgradeModal(animal)">
-          <div class="leftPanelImageWrap" style="background: url('images/{{animal.img}}')">
-          </div>
-            <div class="leftPhotoWrap">
-                <div class="header">
-                    {{animal.name}}
-                </div>
-                <div class="attribute">
-                    <span><img class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="">: 0</span>
-                    <span><img class="attr-icon" src="//i.imgur.com/ztfDn80.png" alt="">: 10</span>
-                    <span><img class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="">: 20</span>
+        <div class="animalList">
+            <div class="animalWrap" ng-repeat="animal in leftPanelCtrl.ownAnimals" ng-click="leftPanelCtrl.openUpgradeModal(animal)">
+              <div class="leftPanelImageWrap" style="background: url('images/{{animal.img}}')">
+              </div>
+                <div class="leftPhotoWrap">
+                    <div class="header">
+                        {{animal.name}}
+                    </div>
+                    <div class="attribute">
+                        <span class="left-attr-column">
+                            <img class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="">
+                            <span class="left-attr-number">0</span>
+                        </span>
+                        <span class="left-attr-column">
+                            <img class="attr-icon" src="//i.imgur.com/ztfDn80.png" alt="">
+                            <span class="left-attr-number">10</span>
+                        </span>
+                        <span class="left-attr-column">
+                            <img class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="">
+                            <span class="left-attr-number">20</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
