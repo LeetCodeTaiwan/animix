@@ -7,8 +7,10 @@
     "dev": "export NODE_ENV=development && webpack-dev-server --devtool=source-map --progress --colors --port=9000 --content-base app",
     "test": "export NODE_ENV=test && karma start",
     "clean": "rm -rf docs/",
+    "copy": "mkdir docs/statics && cp -rf app/images docs/ && cp -rf app/statics docs/",
     "prebuild": "npm run clean",
-    "build": "export NODE_ENV=production && node node_modules/.bin/webpack && cp app/index.html docs/index.html"
+    "build": "export NODE_ENV=production && node node_modules/.bin/webpack && cp app/index.html docs/index.html",
+    "postbuild": "npm run copy"
   },
   "keywords": [
     "angular",
