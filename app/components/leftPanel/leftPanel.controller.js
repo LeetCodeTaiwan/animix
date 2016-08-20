@@ -27,7 +27,7 @@ export default class LeftPanelController {
 
     openLeftPanel() {
         console.log('HAHAHA');
-        $('.ui.sidebar')
+        $('#left-sidebar')
             .sidebar('setting', 'dimPage', false)
             .sidebar('setting', 'closable', false)
             .sidebar('setting', 'transition', 'overlay')
