@@ -1,5 +1,5 @@
 export default class LeftPanelController {
-    constructor() {
+    constructor(animals) {
         this.zooItems = [{
             "id": 0,
             "code": "cat",
@@ -23,14 +23,20 @@ export default class LeftPanelController {
             "favor": 30,
             "productivity": 150,
         }]
+
+        this.ownAnimals = animals;
     }
 
     openLeftPanel() {
         console.log('HAHAHA');
-        $('#left-sidebar')
+        $('#leftPanel')
             .sidebar('setting', 'dimPage', false)
             .sidebar('setting', 'closable', false)
             .sidebar('setting', 'transition', 'overlay')
             .sidebar('toggle');
+    }
+
+    closePanel() {
+        $('#leftPanel').sidebar('hide')
     }
 }

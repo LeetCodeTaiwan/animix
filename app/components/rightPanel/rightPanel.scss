@@ -1,33 +1,52 @@
 .icon {
-  color: white;
+    color: white;
 }
 
 .rightIcons {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .closeBtn {
-  position: relative;
-  top: 10px;
-  left: 10px;
+    position: relative;
+    top: 10px;
+    left: 10px;
 }
 
-.animalList {
-
-}
+.animalList {}
 
 .animalWrap {
-  display: flex;
-  margin: 10px 0;
+    display: flex;
+    margin: 10px 0;
+}
+
+.animalWrap:hover {
+    background-color: rgba(255, 255, 255, .08);
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
 
 .rightTitle {
-  font-size: 30px;
-  margin: auto;
+    font-size: 30px;
+    margin: auto;
 }
 
 .rightPhotoWrap {
-  margin-left: 15px;
+    margin-left: 15px;
+}
+
+.rightPhotoWrap .header {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.rightPhotoWrap .description {
+    font-size: 15px;
 }
 
 .rightPanelWrap {
@@ -36,15 +55,15 @@
 }
 
 .rightPanelTitle {
-  display: flex;
-  margin: 30px 0;
+    display: flex;
+    margin: 30px 0;
 }
 
 .rightActionBtnWrap {
-  justify-content: flex-end;
-  margin: auto;
-  flex: 1;
-  display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    flex: 1;
+    display: flex;
 }
 
 .iconWrap {
