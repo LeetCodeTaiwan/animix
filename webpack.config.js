@@ -6,7 +6,7 @@ var _ = require('lodash');
 var config = {
   context: __dirname + '/app',
   entry: './index.js',
-  plugins: [  
+  plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'INCLUDE_ALL_MODULES': function includeAllModulesGlobalFn(modulesArray, application) {
@@ -56,7 +56,7 @@ switch (nodeEnvironment) {
     config.plugins.push(new webpack.optimize.DedupePlugin());
     config.plugins.push(new webpack.optimize.OccurenceOrderPlugin());
     config.plugins.push(new webpack.optimize.CommonsChunkPlugin({name: 'vendor', minChunks: Infinity}));
-    
+
     config.output.filename = '[name].js';
 
     config.entry = {
@@ -74,9 +74,9 @@ switch (nodeEnvironment) {
     config.entry = ['./index.js', 'webpack/hot/dev-server'];
     config.devtool = 'source-map';
     break;
-    
-  default: 
+
+  default:
     console.warn('Unknown or Undefigned Node Environment. Please refer to package.json for available build commands.');
 }
 
-module.exports = config; 
+module.exports = config;
