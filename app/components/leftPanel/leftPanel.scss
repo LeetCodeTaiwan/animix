@@ -7,10 +7,13 @@
   margin: auto;
 }
 
-.leftPanelTitle {
+.panelTitle {
   display: flex;
   padding: 30px 0;
   background-color: #183a5d;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .leftPhotoWrap {
@@ -18,18 +21,34 @@
 }
 
 .leftPhotoWrap .header {
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 40px;
 }
 
 .leftPhotoWrap .attribute {
     font-size: 15px;
 }
 
+.attribute.inner .attr-icon {
+	width: 50px;
+	position: relative;
+	top: 13px;
+	margin-left: 15px;
+}
+
+.attribute.inner span {
+	font-size: 30px;
+	color: #555;
+}
+
 .attr-icon {
 	position: relative;
 	top: 5px;
 	width: 22px;
+}
+
+.attr-icon.big {
+	width: 40px;
 }
 
 .zooImg {

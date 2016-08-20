@@ -24,6 +24,10 @@
     margin: 10px 0;
 }
 
+.animalWrap.top {
+    height: 70px;
+}
+
 .animalWrap:hover {
     background-color: rgba(255, 255, 255, .08);
     cursor: pointer;
@@ -36,6 +40,11 @@
                                   not supported by any browser */
 }
 
+.animalWrap img {
+    max-width: 100px;
+    max-height: 80px;
+}
+
 .rightTitle {
     font-size: 30px;
     margin: auto;
@@ -46,23 +55,26 @@
 }
 
 .rightPhotoWrap .header {
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 35px;
 }
 
 .rightPhotoWrap .description {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .rightPanelWrap {
   display: flex;
-  height: 95vh;
+  height: 85vh;
 }
 
-.rightPanelTitle {
+.panelTitle {
     display: flex;
     padding: 30px 0;
     background-color: #183a5d;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .rightActionBtnWrap {

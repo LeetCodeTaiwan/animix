@@ -30,4 +30,9 @@ export default class LeftPanelController {
     closePanel() {
         $('#leftPanel').sidebar('hide')
     }
+
+    openUpgradeModal() {
+        $('#upgradeModal')
+            .modal('show');
+    }
 }
