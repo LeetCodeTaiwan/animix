@@ -88,21 +88,35 @@ export default class RightPanelController {
         console.log(this.ownAnimals);
     }
 
-    toggleRightPanel() {
+    togglePanels(){
         $('#rightPanel')
             .sidebar('setting', 'dimPage', false)
             .sidebar('setting', 'closable', false)
             .sidebar('setting', 'transition', 'overlay')
             .sidebar('toggle')
-    }
 
-    toggleLeftPanel() {
         $('#leftPanel')
             .sidebar('setting', 'dimPage', false)
             .sidebar('setting', 'closable', false)
             .sidebar('setting', 'transition', 'overlay')
             .sidebar('toggle')
     }
+
+    // toggleRightPanel() {
+    //     $('#rightPanel')
+    //         .sidebar('setting', 'dimPage', false)
+    //         .sidebar('setting', 'closable', false)
+    //         .sidebar('setting', 'transition', 'overlay')
+    //         .sidebar('toggle')
+    // }
+
+    // toggleLeftPanel() {
+    //     $('#leftPanel')
+    //         .sidebar('setting', 'dimPage', false)
+    //         .sidebar('setting', 'closable', false)
+    //         .sidebar('setting', 'transition', 'overlay')
+    //         .sidebar('toggle')
+    // }
 
     closePanel() {
         $('#rightPanel').sidebar('hide')
