@@ -10,8 +10,9 @@
         </a> -->
         <div class="animalWrap top">
         </div>
-        <div class="animalWrap" ng-repeat="animal in leftPanelCtrl.ownAnimals" ng-click="leftPanelCtrl.openUpgradeModal()">
-            <img ng-src="images/{{animal.img}}">
+        <div class="animalWrap" ng-repeat="animal in leftPanelCtrl.ownAnimals" ng-click="leftPanelCtrl.openUpgradeModal(animal)">
+          <div class="leftPanelImageWrap" style="background: url('images/{{animal.img}}')">
+          </div>
             <div class="leftPhotoWrap">
                 <div class="header">
                     {{animal.name}}
@@ -22,50 +23,50 @@
                     <span><img class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="">: 20</span>
                 </div>
             </div>
-            <div class="ui modal" id="upgradeModal">
-                <i class="close icon"></i>
-                <div class="header">
-                    動物護照
-                </div>
-                <div class="image content">
-                    <div class="ui medium image">
-                        <img ng-src="images/{{animal.img}}">
-                    </div>
-                    <div class="description">
-                        <div class="ui header">{{animal.name}}</div>
-                        <div class="attribute inner">
-		                    <span><img class="attr-icon big" src="//i.imgur.com/7XAsKFu.png" alt="">: 0</span>
-		                    <span><img class="attr-icon big" src="//i.imgur.com/ztfDn80.png" alt="">: 10</span>
-		                    <span><img class="attr-icon big" src="//i.imgur.com/qJHPUlh.png" alt="">: 20</span>
-		                </div>
-                        <div class="ui segment">
-                            <p>Hi 小魯～</p>
-                            <p>嘻嘻</p>
-                            <p>哈囉</p>
-                        </div>
-                        <form class="ui reply form">
-                            <div class="field">
-                                <div class="ui input">
-                                    <input type="text" placeholder="Type here...">
-                                </div>
-                            </div>
-                            <div class="ui primary submit button">
-                                <!-- <i class="icon edit"></i> -->
-                                Enter
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- <div class="actions">
-                    <div class="ui black deny button">
-                        Nope
-                    </div>
-                    <div class="ui positive right labeled icon button">
-                        Yep, that's me
-                        <i class="checkmark icon"></i>
-                    </div>
-                </div> -->
+        </div>
+        <div class="ui modal" id="upgradeModal">
+            <i class="close icon"></i>
+            <div class="header">
+                動物護照
             </div>
+            <div class="image content">
+                <div class="ui medium image">
+                    <img ng-src="images/{{leftPanelCtrl.currentAnimal.img}}">
+                </div>
+                <div class="description">
+                    <div class="ui header">{{leftPanelCtrl.currentAnimal.name}}</div>
+                    <div class="attribute inner">
+                    <span><img class="attr-icon big" src="//i.imgur.com/7XAsKFu.png" alt="">: 0</span>
+                    <span><img class="attr-icon big" src="//i.imgur.com/ztfDn80.png" alt="">: 10</span>
+                    <span><img class="attr-icon big" src="//i.imgur.com/qJHPUlh.png" alt="">: 20</span>
+                </div>
+                    <div class="ui segment">
+                        <p>Hi 小魯～</p>
+                        <p>嘻嘻</p>
+                        <p>哈囉</p>
+                    </div>
+                    <form class="ui reply form">
+                        <div class="field">
+                            <div class="ui input">
+                                <input type="text" placeholder="Type here...">
+                            </div>
+                        </div>
+                        <div class="ui primary submit button">
+                            <!-- <i class="icon edit"></i> -->
+                            Enter
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="actions">
+                <div class="ui black deny button">
+                    Nope
+                </div>
+                <div class="ui positive right labeled icon button">
+                    Yep, that's me
+                    <i class="checkmark icon"></i>
+                </div>
+            </div> -->
         </div>
     </div>
 </div>
