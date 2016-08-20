@@ -27,15 +27,6 @@ export default class LeftPanelController {
         this.ownAnimals = animals;
     }
 
-    openLeftPanel() {
-        console.log('HAHAHA');
-        $('#leftPanel')
-            .sidebar('setting', 'dimPage', false)
-            .sidebar('setting', 'closable', false)
-            .sidebar('setting', 'transition', 'overlay')
-            .sidebar('toggle');
-    }
-
     closePanel() {
         $('#leftPanel').sidebar('hide')
     }
