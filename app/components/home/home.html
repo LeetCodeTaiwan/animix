@@ -1,8 +1,19 @@
 <div class="Container home wrap pusher">
+	<div class="topPanel">
+		<div class="diamondCount">
+			<div class="diamondCountWrap">
+				<i class="ui diamond icon diamondIcon"></i>
+				<div>{{homeCtrl.diamondCount | number: 0}}</div>
+			</div>
+			<div>
+				Rate: {{homeCtrl.diamondRate | number: 1}}
+			</div>
+		</div>
+	</div>
 	<left-panel></left-panel>
   <right-panel></right-panel>
     <div>
-        <div class="earth">
+        <div class="earth" ng-click="homeCtrl.getThunder()">
           <div class="earth--shadow"></div>
         </div>
 				<div class="thunder"></div>
