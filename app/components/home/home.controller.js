@@ -8,10 +8,13 @@ export default class HomeController {
         }, 50)
     }
 
-    getThunder () {
+    getThunder ({ originalEvent:{ clientX, clientY } }) {
       this.diamondCount += 1
+
+      $('.thunder-wrap').css('left', clientX)
+      $('.thunder-wrap').css('top', clientY - 90)
       $('.thunder').css('animation', 'thunder 0.5s linear')
-      setTimeout(() => $('.thunder').css('animation', 'initial'), 250)
+      setTimeout(() => $('.thunder').css('animation', 'initial'), 500)
     }
 
 }

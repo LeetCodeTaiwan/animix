@@ -13,10 +13,14 @@
 	<left-panel></left-panel>
   <right-panel></right-panel>
     <div>
-        <div class="earth" ng-click="homeCtrl.getThunder()">
+        <div class="earth" ng-click="homeCtrl.getThunder($event)">
           <div class="earth--shadow"></div>
         </div>
-				<div class="thunder"></div>
+
+		<div class="thunder-wrap">
+			<div class="thunder"></div>
+		</div>
+        
         <div class="moon"></div>
         <div class="moon2"></div>
         <div class="stars"></div>
