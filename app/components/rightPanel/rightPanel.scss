@@ -65,7 +65,7 @@
 
 .rightPanelWrap {
   display: flex;
-  height: 85vh;
+  height: 100vh;
 }
 
 .panelTitle {
@@ -88,5 +88,6 @@
   display: flex;
   flex-direction: row;
   align-self: flex-end;
-  margin: 0 auto;
+  margin: 20px auto;
+  z-index: 10;
 }
