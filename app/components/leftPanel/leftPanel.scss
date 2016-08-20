@@ -2,21 +2,55 @@
   
 }
 
-.panel-title {
-	color: #fff;
-	font-size: 2em;
-	line-height: 2em;
-	text-align: center;
+.leftTitle {
+  font-size: 30px;
+  margin: auto;
 }
 
-i.left-icon {
-	font-size: 2em;
-	color: #fff;
+.panelTitle {
+  display: flex;
+  padding: 30px 0;
+  background-color: #183a5d;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.leftPhotoWrap {
+    margin-left: 15px;
+}
+
+.leftPhotoWrap .header {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.leftPhotoWrap .attribute {
+    font-size: 15px;
+}
+
+.attribute.inner .attr-icon {
+	width: 50px;
 	position: relative;
-	top: 0.5em;
+	top: 13px;
+	margin-left: 15px;
 }
 
-i.left-icon.inner {
-	position: absolute;
-	right: 0;
+.attribute.inner span {
+	font-size: 30px;
+	color: #555;
+}
+
+.attr-icon {
+	position: relative;
+	top: 5px;
+	width: 22px;
+}
+
+.attr-icon.big {
+	width: 40px;
+}
+
+.zooImg {
+	width: 100px !important;
 }

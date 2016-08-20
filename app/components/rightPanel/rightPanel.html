@@ -1,33 +1,60 @@
 <div class="rightPanelWrap">
-  <div class="iconWrap">
-    <i
-      class="shop icon big white rightIcons"
-      ng-click="rightPanelCtrl.toggleRightPanel()"
-    ></i>
-    <i class="user icon big white rightIcons"></i>
-    <i class="lemon icon big white rightIcons"></i>
-    <i class="cube icon big white rightIcons"></i>
-  </div>
-  <div class="ui sidebar right inverted vertical menu" id="rightPanel">
-    <div class="rightPanelTitle">
-      <i class="ui close large icon" ng-click="rightPanelCtrl.closePanel()"></i>
-      <div class="rightTitle">Shop</div>
+    <div class="iconWrap">
+        <i class="archive icon big rightIcons" ng-click="rightPanelCtrl.toggleLeftPanel()"></i>
+        <i class="user icon big white rightIcons"></i>
+        <i class="lemon icon big white rightIcons"></i>
+        <i class="cube icon big white rightIcons"></i>
+        <i class="shop icon big white rightIcons" ng-click="rightPanelCtrl.toggleRightPanel()"></i>
     </div>
-    <div class="animalList">
-      <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals">
-        <img ng-src={{animal.img}}>
-        <div class="rightPhotoWrap">
-          <div class="header">
-            {{animal.name}}
-          </div>
-          <div class="description">
-            <p>{{animal.description}}</p>
-          </div>
+    <div class="ui sidebar right inverted vertical menu" id="rightPanel">
+        <div class="panelTitle">
+            <i class="ui chevron right large icon cursor" ng-click="rightPanelCtrl.closePanel()"></i>
+            <div class="rightTitle">SHOP</div>
         </div>
-        <div class="rightActionBtnWrap" ng-click="rightPanelCtrl.buyAnimal(animal.id)">
-          <i class="ui circle big add icon"></i>
+        <div class="animalList">
+            <div class="animalWrap top">
+            </div>
+            <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals" ng-click="rightPanelCtrl.buyAnimal(animal)">
+                <img ng-src="images/{{animal.img}}">
+                <div class="rightPhotoWrap">
+                    <div class="header">
+                        {{animal.name}}
+                    </div>
+                    <div class="description">
+                        <p><i class="diamond icon white"></i>{{animal.cost}}</p>
+                    </div>
+                </div>
+                <div class="rightActionBtnWrap">
+                    <i class="ui circle info icon cursor big" ng-click="rightPanelCtrl.checkInfo(animal.id); $event.stopPropagation();"></i>
+                </div>
+                <div class="ui modal" id="infoModal">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        動物護照
+                    </div>
+                    <div class="image content">
+                        <div class="ui medium image">
+                            <img ng-src="/images/{{animal.img}}">
+                        </div>
+                        <div class="description">
+                            <div class="ui header">{{animal.name}}</div>
+                            <div class="ui header">{{animal.description.A_Location}}</div>
+                            <div class="ui header">{{animal.description.A_Class}}</div>
+                            <div class="ui header">{{animal.description.A_Phylum}}</div>
+                            <div class="ui header">{{animal.description.A_Feature}}</div>
+                        </div>
+                    </div>
+                    <!-- <div class="actions">
+                        <div class="ui black deny button">
+                            Nope
+                        </div>
+                        <div class="ui positive right labeled icon button">
+                            Yep, that's me
+                            <i class="checkmark icon"></i>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
