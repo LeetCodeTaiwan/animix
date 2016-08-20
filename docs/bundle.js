@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cccce0ca4e8a3c44d69c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "64952779806d93d31999"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -37120,7 +37120,7 @@
 	            $('#upgradeModal').modal('show');
 	            var req = {
 	                method: 'POST',
-	                url: 'http://hackntu-nodered.mybluemix.net/start-talking/',
+	                url: '//hackntu-nodered.mybluemix.net/start-talking/',
 	                headers: {
 	                    "Access-Control-Allow-Origin": "*",
 	                    "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
