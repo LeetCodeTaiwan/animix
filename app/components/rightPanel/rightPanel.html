@@ -14,7 +14,8 @@
         <div class="animalList">
             <div class="animalWrap top">
             </div>
-            <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals" ng-click="rightPanelCtrl.buyAnimal(animal)">
+
+            <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals" ng-click="rightPanelCtrl.buyAnimal(animal)" ng-class="{'diamond-insufficient': !rightPanelCtrl.enoughDiamond(animal.cost) }>
                 <div class="rightPanelImageWrap" style="background: url('images/{{animal.img}}')">
                 </div>
                 <div class="rightPhotoWrap">

@@ -1,15 +1,14 @@
 export default class HomeController {
     constructor (diamond, $interval) {
         this.name = 'home';
-        this.diamondCount = diamond.count
-        this.diamondRate = diamond.rate
+        this.diamond = diamond
         $interval(() => {
-          this.diamondCount = this.diamondCount + this.diamondRate / 20
+          this.diamond.count = this.diamond.count + this.diamond.rate / 20
         }, 50)
     }
 
     getThunder ({ originalEvent:{ clientX, clientY } }) {
-      this.diamondCount += 1
+      this.diamond.count += 1
 
       $('.thunder-wrap').css('left', clientX)
       $('.thunder-wrap').css('top', clientY - 90)
