@@ -1,0 +1,12 @@
+<div class='leftPanel'>
+    <i class="archive icon left-icon" ng-click="leftPanelCtrl.openLeftPanel()"></i>
+    <div class="ui wide sidebar inverted vertical menu">
+        <i class="archive icon left-icon inner" ng-click="leftPanelCtrl.openLeftPanel()"></i>
+        <div class="panel-title">ZOO</div>
+        <a class="item" ng-repeat="item in leftPanelCtrl.zooItems">
+            <img ng-src="{{item.img}}" alt="{{item.name}}">
+            <p>{{item.favor}}</p>
+        </a>
+        
+    </div>
+</div>
