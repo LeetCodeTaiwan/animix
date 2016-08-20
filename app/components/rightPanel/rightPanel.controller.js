@@ -2,6 +2,7 @@ export default class RightPanelController {
     constructor(animals) {
         this.name = 'rightPanel';
         this.ownAnimals = animals;
+        this.currentAnimal = {};
         this.animals = [
     {
         "id": 0,
@@ -78,7 +79,8 @@ export default class RightPanelController {
 ]
     }
 
-    checkInfo(animalId) {
+    checkInfo(animal) {
+      this.currentAnimal = animal
         $('#infoModal')
             .modal('show');
     }
