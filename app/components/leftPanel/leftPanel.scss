@@ -1,5 +1,5 @@
 .leftPanel {
-  
+
 }
 
 .leftTitle {
@@ -16,13 +16,32 @@
   width: 100%;
 }
 
+.leftPanelImageWrap {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  margin: auto 10px;
+  border-radius: 75px;
+  border: 2px solid;
+}
+
+.leftPhotoName {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
 .leftPhotoWrap {
-    margin-left: 15px;
+  margin-left: 5px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .leftPhotoWrap .header {
     font-size: 20px;
-    line-height: 40px;
 }
 
 .leftPhotoWrap .attribute {

@@ -15,9 +15,10 @@
             <div class="animalWrap top">
             </div>
             <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals" ng-click="rightPanelCtrl.buyAnimal(animal)">
-                <img ng-src="images/{{animal.img}}">
+                <div class="rightPanelImageWrap" style="background: url('images/{{animal.img}}')">
+                </div>
                 <div class="rightPhotoWrap">
-                    <div class="header">
+                    <div class="rightPhotoName">
                         {{animal.name}}
                     </div>
                     <div class="description">
