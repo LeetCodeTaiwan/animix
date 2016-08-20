@@ -1,0 +1,33 @@
+<div class="rightPanelWrap">
+  <div class="iconWrap">
+    <i
+      class="shop icon big white rightIcons"
+      ng-click="rightPanelCtrl.toggleRightPanel()"
+    ></i>
+    <i class="user icon big white rightIcons"></i>
+    <i class="lemon icon big white rightIcons"></i>
+    <i class="cube icon big white rightIcons"></i>
+  </div>
+  <div class="ui sidebar right inverted vertical menu" id="rightPanel">
+    <div class="rightPanelTitle">
+      <i class="ui close large icon" ng-click="rightPanelCtrl.closePanel()"></i>
+      <div class="rightTitle">Shop</div>
+    </div>
+    <div class="animalList">
+      <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals">
+        <img ng-src={{animal.img}}>
+        <div class="rightPhotoWrap">
+          <div class="header">
+            {{animal.name}}
+          </div>
+          <div class="description">
+            <p>{{animal.description}}</p>
+          </div>
+        </div>
+        <div class="rightActionBtnWrap" ng-click="rightPanelCtrl.buyAnimal(animal.id)">
+          <i class="ui circle big add icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
