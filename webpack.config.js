@@ -18,7 +18,7 @@ var config = {
     })
   ],
   output: {
-    path: __dirname + '/app',
+    path: __dirname + '/docs',
     filename: 'bundle.js'
   },
   resolve: {
@@ -51,7 +51,7 @@ var config = {
 
 switch (nodeEnvironment) {
   case 'production':
-    config.output.path = __dirname + '/dist';
+    config.output.path = __dirname + '/docs';
     config.plugins.push(new webpack.optimize.UglifyJsPlugin());
     config.plugins.push(new webpack.optimize.DedupePlugin());
     config.plugins.push(new webpack.optimize.OccurenceOrderPlugin());
