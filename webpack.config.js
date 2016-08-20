@@ -52,16 +52,11 @@ var config = {
 switch (nodeEnvironment) {
   case 'production':
     config.output.path = __dirname + '/docs';
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
-    config.plugins.push(new webpack.optimize.DedupePlugin());
-    config.plugins.push(new webpack.optimize.OccurenceOrderPlugin());
-    config.plugins.push(new webpack.optimize.CommonsChunkPlugin({name: 'vendor', minChunks: Infinity}));
 
     config.output.filename = '[name].js';
 
     config.entry = {
-      bundle: './index.js',
-      vendor: ['jquery', 'angular', 'angular-ui-router', 'lodash']
+      bundle: './index.js'
     }
     config.devtool = 'source-map';
     break;
