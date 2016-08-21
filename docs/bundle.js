@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "83799b5835b4b7a7143e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a137de1d9928862efa81"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -37209,11 +37209,13 @@
 	            var messages = this.messages;
 	            this.fetch(req).then(function (response) {
 	                try {
-	                    messages.push({
-	                        threadId: animal.uuid,
-	                        from: 'animal',
-	                        text: response.data[0]
-	                    });
+	                    if (!response.data[0].includes('error')) {
+	                        messages.push({
+	                            threadId: animal.uuid,
+	                            from: 'animal',
+	                            text: response.data[0]
+	                        });
+	                    }
 	                } catch (e) {
 	                    console.log(e);
 	                }
