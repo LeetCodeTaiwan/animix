@@ -1,5 +1,7 @@
 export default class LeftPanelController {
-    constructor(animals, diamond, $http) {
+    constructor(animals, diamond, $http, $anchorScroll, $location) {
+        this.anchorScroll = $anchorScroll
+        this.location = $location
         this.diamond = diamond
         this.messages = []
         this.messgeToBeSend = ''
@@ -88,6 +90,8 @@ export default class LeftPanelController {
             catch (e) { console.log(e) }
         })
         this.messgeToBeSend = ''
+        const msgBox = document.getElementById('messageBox')
+        msgBox.scrollTop += 500
       }
     }
 

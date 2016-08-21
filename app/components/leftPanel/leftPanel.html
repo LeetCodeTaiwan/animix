@@ -68,10 +68,10 @@
               </div>
               <div class="rightModalWrapp">
                 <div class="messageWrap">
-                  <div class="messageItemWrap">
+                  <div class="messageItemWrap" id="messageBox">
                     <div
                       class="messageItem"
-                      ng-repeat="msg in leftPanelCtrl.messages"
+                      ng-repeat="msg in leftPanelCtrl.messages track by $index"
                       ng-class="{'userMsg': msg.from === 'user', 'animalMsg': msg.from === 'animal'}"
                     >
                       <div class="messageInlineWrap">
