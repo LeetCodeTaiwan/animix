@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e9df6fc016626f90ba63"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bd57825e698f75ef8be5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -37060,7 +37060,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='leftPanel'>\n    <div class=\"ui sidebar inverted vertical menu\" id=\"leftPanel\">\n        <div class=\"panelTitle\">\n            <div class=\"leftTitle\">ZOO</div>\n            <!-- <i class=\"ui chevron left large icon cursor\" ng-click=\"leftPanelCtrl.closePanel()\"></i> -->\n        </div>\n        <!-- <a class=\"item\" ng-repeat=\"item in leftPanelCtrl.ownAnimals\">\n            <img class=\"zooImg\" ng-src=\"{{item.img}}\" alt=\"{{item.name}}\">\n            <p>{{item.name}}</p>\n        </a> -->\n        <div class=\"animalList\">\n            <div class=\"animalWrap\" ng-repeat=\"animal in leftPanelCtrl.ownAnimals\" ng-click=\"leftPanelCtrl.openUpgradeModal(animal)\">\n                <div class=\"leftPanelImageWrap\" style=\"background-image: url('images/{{animal.img}}')\">\n                </div>\n                <div class=\"leftPhotoWrap\">\n                    <div class=\"header\">\n                        {{animal.name}}\n                    </div>\n                    <div class=\"attribute\">\n                        <span class=\"left-attr-column\">\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/7XAsKFu.png\" alt=\"\">\n                            <span class=\"left-attr-number\">0</span>\n                        </span>\n                        <span class=\"left-attr-column\">\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/ztfDn80.png\" alt=\"\">\n                            <span class=\"left-attr-number\">10</span>\n                        </span>\n                        <span class=\"left-attr-column\">\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/qJHPUlh.png\" alt=\"\">\n                            <span class=\"left-attr-number\">20</span>\n                        </span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"ui modal\" id=\"upgradeModal\">\n            <i class=\"close icon\"></i>\n            <div class=\"header upgrade-modal-header\">\n                動物護照\n            </div>\n            <div class=\"image content upgrade-modal-content\">\n                <div class=\"ui medium image\">\n                    <img ng-src=\"images/{{leftPanelCtrl.currentAnimal.img}}\">\n                </div>\n                <div class=\"description\">\n                    <div class=\"ui header\">{{leftPanelCtrl.currentAnimal.name}}</div>\n                    <div class=\"attribute inner\">\n                        <span class=\"left-attr-column\">\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/7XAsKFu.png\" alt=\"\">\n                            <span class=\"left-attr-number\">0</span>\n                        </span>\n                        <span class=\"left-attr-column\">\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/ztfDn80.png\" alt=\"\">\n                            <span class=\"left-attr-number\">10</span>\n                        </span>\n                        <span class=\"left-attr-column\">\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/qJHPUlh.png\" alt=\"\">\n                            <span class=\"left-attr-number\">20</span>\n                        </span>\n                    </div>\n                </div>\n                <!-- <div class=\"ui segment\">\n                    <p>Hi 小魯～</p>\n                    <p>嘻嘻</p>\n                    <p>哈囉</p>\n                </div>\n                <form class=\"ui reply form\">\n                    <div class=\"field\">\n                        <div class=\"ui input\">\n                            <input type=\"text\" placeholder=\"Type here...\">\n                        </div>\n                    </div>\n                    <div class=\"ui primary submit button\">\n                        Enter\n                    </div>\n                </form> -->\n            </div>\n        </div>\n        <!-- <div class=\"actions\">\n                <div class=\"ui black deny button\">\n                    Nope\n                </div>\n                <div class=\"ui positive right labeled icon button\">\n                    Yep, that's me\n                    <i class=\"checkmark icon\"></i>\n                </div>\n            </div> -->\n    </div>\n</div>\n";
+	module.exports = "<div class='leftPanel'>\r\n    <div class=\"ui sidebar inverted vertical menu\" id=\"leftPanel\">\r\n        <div class=\"panelTitle\">\r\n            <div class=\"leftTitle\">ZOO</div>\r\n            <!-- <i class=\"ui chevron left large icon cursor\" ng-click=\"leftPanelCtrl.closePanel()\"></i> -->\r\n        </div>\r\n        <!-- <a class=\"item\" ng-repeat=\"item in leftPanelCtrl.ownAnimals\">\r\n            <img class=\"zooImg\" ng-src=\"{{item.img}}\" alt=\"{{item.name}}\">\r\n            <p>{{item.name}}</p>\r\n        </a> -->\r\n        <div class=\"animalList\">\r\n            <div class=\"animalWrap\" ng-repeat=\"animal in leftPanelCtrl.ownAnimals\" ng-click=\"leftPanelCtrl.openUpgradeModal(animal)\">\r\n                <div class=\"leftPanelImageWrap\" style=\"background-image: url( '{{leftPanelCtrl.getMixImageUrl(animal)}}' )\">\r\n                </div>\r\n                <div class=\"leftPhotoWrap\">\r\n                    <div class=\"header\">\r\n                        {{animal.name}}\r\n                    </div>\r\n                    <div class=\"attribute\">\r\n                        <span class=\"left-attr-column\">\r\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/7XAsKFu.png\" alt=\"\">\r\n                            <span class=\"left-attr-number\">{{animal.levels[0]}}</span>\r\n                        </span>\r\n                        <span class=\"left-attr-column\">\r\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/ztfDn80.png\" alt=\"\">\r\n                            <span class=\"left-attr-number\">{{animal.levels[1]}}</span>\r\n                        </span>\r\n                        <span class=\"left-attr-column\">\r\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/qJHPUlh.png\" alt=\"\">\r\n                            <span class=\"left-attr-number\">{{animal.levels[2]}}</span>\r\n                        </span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"ui modal\" id=\"upgradeModal\">\r\n            <i class=\"close icon\"></i>\r\n            <div class=\"header upgrade-modal-header\">\r\n                動物護照\r\n            </div>\r\n            <div class=\"image content upgrade-modal-content column\">\r\n                <div class=\"ui large image\">\r\n                    <img ng-src=\"{{leftPanelCtrl.getMixImageUrl(leftPanelCtrl.currentAnimal) }}\">\r\n                </div>\r\n                <div class=\"animal-description\">\r\n                    <div style='display:flex;' ng-init=\"leftPanelCtrl.isEditMode = false\">\r\n                        <div class=\"ui header\" ng-hide=\"leftPanelCtrl.isEditMode\" ng-click=\"leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode\">{{leftPanelCtrl.currentAnimal.name}}</div>\r\n                        <input class=\"ui input\" type=\"text\" ng-show=\"leftPanelCtrl.isEditMode\" ng-model=\"leftPanelCtrl.currentAnimal.name\" ng-keypress=\"leftPanelCtrl.renameAnimal($event)\" >\r\n                        <i class=\"ui edit icon\" ng-click=\"leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode\"></i>\r\n                    </div>\r\n                    <div class=\"attribute inner\">\r\n                        <span class=\"left-attr-column\">\r\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/7XAsKFu.png\" alt=\"\">\r\n                            <span class=\"left-attr-number\">{{leftPanelCtrl.currentAnimal.levels[0]}}</span>\r\n                        </span>\r\n                        <span class=\"left-attr-column\">\r\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/ztfDn80.png\" alt=\"\">\r\n                            <span class=\"left-attr-number\">{{leftPanelCtrl.currentAnimal.levels[1]}}</span>\r\n                        </span>\r\n                        <span class=\"left-attr-column\">\r\n                            <img class=\"attr-icon\" src=\"//i.imgur.com/qJHPUlh.png\" alt=\"\">\r\n                            <span class=\"left-attr-number\">{{leftPanelCtrl.currentAnimal.levels[2]}}</span>\r\n                        </span>\r\n                    </div>\r\n                </div>\r\n\r\n                <div ng-click=\"leftPanelCtrl.upgradeAnimal(0)\">upgrade fire</div>\r\n                <div ng-click=\"leftPanelCtrl.upgradeAnimal(1)\">upgrade ice</div>\r\n                <div ng-click=\"leftPanelCtrl.upgradeAnimal(2)\">upgrade lightening</div>\r\n                <!-- <div class=\"ui segment\">\r\n                    <p>Hi 小魯～</p>\r\n                    <p>嘻嘻</p>\r\n                    <p>哈囉</p>\r\n                </div>\r\n                <form class=\"ui reply form\">\r\n                    <div class=\"field\">\r\n                        <div class=\"ui input\">\r\n                            <input type=\"text\" placeholder=\"Type here...\">\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"ui primary submit button\">\r\n                        Enter\r\n                    </div>\r\n                </form> -->\r\n            </div>\r\n        </div>\r\n        <!-- <div class=\"actions\">\r\n                <div class=\"ui black deny button\">\r\n                    Nope\r\n                </div>\r\n                <div class=\"ui positive right labeled icon button\">\r\n                    Yep, that's me\r\n                    <i class=\"checkmark icon\"></i>\r\n                </div>\r\n            </div> -->\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
 /* 8 */
@@ -37077,9 +37077,10 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var LeftPanelController = function () {
-	    function LeftPanelController(animals, $http) {
+	    function LeftPanelController(animals, diamond, $http) {
 	        _classCallCheck(this, LeftPanelController);
 	
+	        this.diamond = diamond;
 	        this.zooItems = [{
 	            "id": 0,
 	            "code": "cat",
@@ -37088,7 +37089,13 @@
 	            "img": "https://placekitten.com/g/200/100",
 	            "description": "",
 	            "level": 3,
-	            "attr": { "thunder": 0, "fire": 0, "ice": 0, "soul": 2, "mix": 0 },
+	            "attr": {
+	                "thunder": 0,
+	                "fire": 0,
+	                "ice": 0,
+	                "soul": 2,
+	                "mix": 0
+	            },
 	            "favor": 70,
 	            "productivity": 20
 	        }, {
@@ -37099,12 +37106,26 @@
 	            "img": "https://placekitten.com/g/200/100",
 	            "description": "",
 	            "level": 5,
-	            "attr": { "thunder": 3, "fire": 1, "ice": 1, "soul": 0, "mix": 0 },
+	            "attr": {
+	                "thunder": 3,
+	                "fire": 1,
+	                "ice": 1,
+	                "soul": 0,
+	                "mix": 0
+	            },
 	            "favor": 30,
 	            "productivity": 150
 	        }];
 	        this.ownAnimals = animals;
-	        this.currentAnimal = {};
+	        this.currentAnimal = {
+	            "id": 1,
+	            "code": "Butterfly-LBSM",
+	            "name": "琉球青斑蝶",
+	            "img": "Butterfly-LBSM-O.jpg",
+	            "cost": 500,
+	            "productivity": 10,
+	            levels: [0, 0, 0]
+	        };
 	        this.fetch = $http;
 	    }
 	
@@ -37126,7 +37147,9 @@
 	                    "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
 	                    "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
 	                },
-	                data: { "type": animal.code }
+	                data: {
+	                    "type": animal.code
+	                }
 	            };
 	            //
 	            // this.fetch(req).then(function(response){
@@ -37147,6 +37170,85 @@
 	            //         // or server returns response with an error status.
 	            //         alert('http get errorCallback');
 	            //     });
+	        }
+	    }, {
+	        key: "renameAnimal",
+	        value: function renameAnimal(event) {
+	            if (event.keyCode === 13) {
+	                this.isEditMode = false;
+	            }
+	        }
+	    }, {
+	        key: "upgradeAnimal",
+	        value: function upgradeAnimal(attrIdx) {
+	            if (this.currentAnimal.levels[attrIdx] < 3 && this.currentAnimal.levels[0] + this.currentAnimal.levels[1] + this.currentAnimal.levels[2] < 3) {
+	                this.currentAnimal.levels[attrIdx] += 1;
+	                this.diamond.total_productivity += this.currentAnimal.productivity;
+	                this.diamond.rate = this.diamond.total_productivity * this.diamond.diversity_ratio;
+	                // TODO: check cost
+	            }
+	        }
+	    }, {
+	        key: "getMixImageUrl",
+	        value: function getMixImageUrl(animal) {
+	            if (!animal) {
+	                return '';
+	            }
+	            var url = 'images/mix/' + animal.code + '_' + this.levelsToImageCode(animal.levels) + '.jpg';
+	            console.log(animal.levels);
+	            console.log(url);
+	            return url;
+	        }
+	    }, {
+	        key: "levelsToImageCode",
+	        value: function levelsToImageCode(levels) {
+	            var code = '';
+	            var currSum = 0;
+	
+	            // levels[0]
+	            if (levels[0] < 0) {
+	                code += '0';
+	            } else if (levels[0] <= 3) {
+	                code += levels[0].toString();
+	                currSum += levels[0];
+	            } else {
+	                code += '3';
+	                currSum += 3;
+	            }
+	
+	            // levels[1]
+	            if (levels[1] < 0) {
+	                code += '0';
+	            } else {
+	                if (currSum + levels[1] <= 3) {
+	                    code += levels[1].toString();
+	                    currSum += levels[1];
+	                } else {
+	                    code += (3 - currSum).toString();
+	                    currSum += 3 - currSum;
+	                }
+	            }
+	
+	            // levels[2]
+	            if (levels[2] < 0) {
+	                code += '0';
+	            } else {
+	                if (currSum + levels[2] <= 3) {
+	                    code += levels[2].toString();
+	                    currSum += levels[2];
+	                } else {
+	                    code += (3 - currSum).toString();
+	                    currSum += 3 - currSum;
+	                }
+	            }
+	
+	            return code;
+	        }
+	    }, {
+	        key: "test",
+	        value: function test() {
+	            console.log("test");
+	            return '';
 	        }
 	    }]);
 	
@@ -37216,7 +37318,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"rightPanelWrap\">\n    <div class=\"iconWrap\">\n        <i class=\"power icon big rightIcons\" ng-click=\"rightPanelCtrl.togglePanels()\"></i>\n        <!-- <i class=\"user icon big white rightIcons\"></i>\n        <i class=\"lemon icon big white rightIcons\"></i>\n        <i class=\"cube icon big white rightIcons\"></i>\n        <i class=\"shop icon big white rightIcons\" ng-click=\"rightPanelCtrl.toggleRightPanel()\"></i> -->\n    </div>\n    <div class=\"ui sidebar right inverted vertical menu\" id=\"rightPanel\">\n        <div class=\"panelTitle\">\n            <!-- <i class=\"ui chevron right large icon cursor\" ng-click=\"rightPanelCtrl.closePanel()\"></i> -->\n            <div class=\"rightTitle\">SHOP</div>\n        </div>\n        <div class=\"animalList\">\n            <!-- <div class=\"animalWrap top\">\n            </div> -->\n\n            <div\n              class=\"animalWrap\"\n              ng-repeat=\"animal in rightPanelCtrl.animals\"\n              ng-click=\"rightPanelCtrl.buyAnimal(animal)\"\n              ng-class=\"{'diamond-insufficient': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\n            >\n                <div\n                  class=\"rightPanelImageWrap\"\n                  style=\"background-image: url('images/{{animal.img}}')\"\n                  ng-class=\"{'insufImage': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\n                >\n                </div>\n                <div\n                  class=\"rightPhotoWrap\"\n                >\n                    <div\n                      class=\"rightPhotoName\"\n                      ng-class=\"{'insufName': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\n                    >\n                        {{animal.name}}\n                    </div>\n                    <div class=\"description\">\n                        <i\n                          class=\"diamond icon right-animal-diamond\"\n                          ng-class=\"{'insufDiamond': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\n                        ></i>\n                        <span\n                          class=\"right-animal-cost\"\n                          ng-class=\"{'insufCost': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\n                        >{{animal.cost}}</span>\n                    </div>\n                </div>\n                <div class=\"rightActionBtnWrap\">\n                    <i class=\"ui circle info icon cursor big right-animal-info\" ng-click=\"rightPanelCtrl.checkInfo(animal); $event.stopPropagation();\"></i>\n                </div>\n            </div>\n            <div class=\"ui modal\" id=\"infoModal\">\n                <i class=\"close icon\"></i>\n                <div class=\"header info-modal-header\">\n                    動物護照\n                </div>\n                <div class=\"image content info-modal-content\">\n                    <div class=\"ui medium image\">\n                        <img ng-src=\"images/{{rightPanelCtrl.currentAnimal.img}}\">\n                    </div>\n                    <div class=\"description\">\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.name}}</div>\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Location}}</div>\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Class}}</div>\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Phylum}}</div>\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Feature}}</div>\n                    </div>\n                </div>\n                <!-- <div class=\"actions\">\n                    <div class=\"ui black deny button\">\n                        Nope\n                    </div>\n                    <div class=\"ui positive right labeled icon button\">\n                        Yep, that's me\n                        <i class=\"checkmark icon\"></i>\n                    </div>\n                </div> -->\n            </div>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "<div class=\"rightPanelWrap\">\r\n    <div class=\"iconWrap\">\r\n        <i class=\"power icon big rightIcons\" ng-click=\"rightPanelCtrl.togglePanels()\"></i>\r\n        <!-- <i class=\"user icon big white rightIcons\"></i>\r\n        <i class=\"lemon icon big white rightIcons\"></i>\r\n        <i class=\"cube icon big white rightIcons\"></i>\r\n        <i class=\"shop icon big white rightIcons\" ng-click=\"rightPanelCtrl.toggleRightPanel()\"></i> -->\r\n    </div>\r\n    <div class=\"ui sidebar right inverted vertical menu\" id=\"rightPanel\">\r\n        <div class=\"panelTitle\">\r\n            <!-- <i class=\"ui chevron right large icon cursor\" ng-click=\"rightPanelCtrl.closePanel()\"></i> -->\r\n            <div class=\"rightTitle\">SHOP</div>\r\n        </div>\r\n        <div class=\"animalList\">\r\n            <!-- <div class=\"animalWrap top\">\r\n            </div> -->\r\n\r\n            <div\r\n              class=\"animalWrap\"\r\n              ng-repeat=\"animal in rightPanelCtrl.animals\"\r\n              ng-click=\"rightPanelCtrl.buyAnimal(animal)\"\r\n              ng-class=\"{'diamond-insufficient': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\r\n            >\r\n                <div\r\n                  class=\"rightPanelImageWrap\"\r\n                  style=\"background-image: url('images/{{animal.img}}')\"\r\n                  ng-class=\"{'insufImage': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\r\n                >\r\n                </div>\r\n                <div\r\n                  class=\"rightPhotoWrap\"\r\n                >\r\n                    <div\r\n                      class=\"rightPhotoName\"\r\n                      ng-class=\"{'insufName': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\r\n                    >\r\n                        {{animal.name}}\r\n                    </div>\r\n                    <div class=\"description\">\r\n                        <i\r\n                          class=\"diamond icon right-animal-diamond\"\r\n                          ng-class=\"{'insufDiamond': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\r\n                        ></i>\r\n                        <span\r\n                          class=\"right-animal-cost\"\r\n                          ng-class=\"{'insufCost': !rightPanelCtrl.enoughDiamond(animal.cost) }\"\r\n                        >{{animal.cost}}</span>\r\n                    </div>\r\n                </div>\r\n                <div class=\"rightActionBtnWrap\">\r\n                    <i class=\"ui circle info icon cursor big right-animal-info\" ng-click=\"rightPanelCtrl.checkInfo(animal); $event.stopPropagation();\"></i>\r\n                </div>\r\n            </div>\r\n            <div class=\"ui modal\" id=\"infoModal\">\r\n                <i class=\"close icon\"></i>\r\n                <div class=\"header info-modal-header\">\r\n                    動物護照\r\n                </div>\r\n                <div class=\"image content info-modal-content\">\r\n                    <div class=\"ui medium image\">\r\n                        <img ng-src=\"images/{{rightPanelCtrl.currentAnimal.img}}\">\r\n                    </div>\r\n                    <div class=\"description\">\r\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.name}}</div>\r\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Location}}</div>\r\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Class}}</div>\r\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Phylum}}</div>\r\n                        <div class=\"ui header\">{{rightPanelCtrl.currentAnimal.description.A_Feature}}</div>\r\n                    </div>\r\n                </div>\r\n                <!-- <div class=\"actions\">\r\n                    <div class=\"ui black deny button\">\r\n                        Nope\r\n                    </div>\r\n                    <div class=\"ui positive right labeled icon button\">\r\n                        Yep, that's me\r\n                        <i class=\"checkmark icon\"></i>\r\n                    </div>\r\n                </div> -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
 /* 12 */
@@ -37319,8 +37421,18 @@
 	        key: "buyAnimal",
 	        value: function buyAnimal(animal) {
 	            if (this.enoughDiamond(animal.cost)) {
-	                this.ownAnimals.push({ name: animal.name, id: animal.id, img: animal.img });
+	                this.ownAnimals.unshift({
+	                    name: animal.name,
+	                    id: animal.id,
+	                    img: animal.img,
+	                    code: animal.code,
+	                    cost: animal.cost,
+	                    productivity: animal.productivity,
+	                    levels: [0, 0, 0]
+	                });
 	                this.diamond.count -= animal.cost;
+	                this.diamond.total_productivity += animal.productivity;
+	                this.diamond.rate = this.diamond.total_productivity * this.diamond.diversity_ratio;
 	                console.log(this.ownAnimals);
 	            } else {
 	                console.log("no enough money");
@@ -37438,7 +37550,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"Container home wrap pusher\">\n\t<div class=\"topPanel\">\n\t\t<div class=\"diamondCount\">\n\t\t\t<div class=\"diamondCountWrap\">\n\t\t\t\t<i class=\"ui diamond icon diamondIcon\" style=\"color: #5cbcff;\"></i>\n\t\t\t\t<div>{{homeCtrl.diamond.count | number: 0}}</div>\n\t\t\t</div>\n\t\t\t<div style=\"color: rgba(255, 255, 255, 0.5); font-size: 24px;\">\n\t\t\t\tRate: {{homeCtrl.diamond.rate | number: 1}}\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<left-panel></left-panel>\n  <right-panel></right-panel>\n    <div>\n        <div class=\"earth\" ng-click=\"homeCtrl.getThunder($event)\">\n          <div class=\"earth--shadow\"></div>\n        </div>\n\n\t\t<div class=\"thunder-wrap\">\n\t\t\t<div class=\"thunder\"></div>\n\t\t</div>\n\n        <div class=\"moon\"></div>\n        <div class=\"moon2\"></div>\n        <div class=\"stars\"></div>\n        <div class=\"inspiration\">Planet credit to <a target=\"_blank\" href=\"http://codepen.io/orrybaram/pen/NqvVeX\">Orry Baram</a></div>\n    </div>\n</div>\n";
+	module.exports = "<div class=\"Container home wrap pusher\">\r\n\t<div class=\"topPanel\">\r\n\t\t<div class=\"diamondCount\">\r\n\t\t\t<div class=\"diamondCountWrap\">\r\n\t\t\t\t<i class=\"ui diamond icon diamondIcon\" style=\"color: #5cbcff;\"></i>\r\n\t\t\t\t<div>{{homeCtrl.diamond.count | number: 0}}</div>\r\n\t\t\t</div>\r\n\t\t\t<div style=\"color: rgba(255, 255, 255, 0.5); font-size: 24px;\">\r\n\t\t\t\tRate: {{homeCtrl.diamond.rate | number: 1}}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<left-panel></left-panel>\r\n  <right-panel></right-panel>\r\n    <div>\r\n        <div class=\"earth\" ng-click=\"homeCtrl.getThunder($event)\">\r\n          <div class=\"earth--shadow\"></div>\r\n        </div>\r\n\r\n\t\t<div class=\"thunder-wrap\">\r\n\t\t\t<div class=\"thunder\"></div>\r\n\t\t</div>\r\n\r\n        <div class=\"moon\"></div>\r\n        <div class=\"moon2\"></div>\r\n        <div class=\"stars\"></div>\r\n        <div class=\"inspiration\">Planet credit to <a target=\"_blank\" href=\"http://codepen.io/orrybaram/pen/NqvVeX\">Orry Baram</a></div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
 /* 16 */
@@ -37447,7 +37559,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -37455,37 +37567,37 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var HomeController = function () {
-	  function HomeController(diamond, $interval) {
-	    var _this = this;
+	    function HomeController(diamond, $interval) {
+	        var _this = this;
 	
-	    _classCallCheck(this, HomeController);
+	        _classCallCheck(this, HomeController);
 	
-	    this.name = 'home';
-	    this.diamond = diamond;
-	    $interval(function () {
-	      _this.diamond.count = _this.diamond.count + _this.diamond.rate / 20;
-	    }, 50);
-	  }
-	
-	  _createClass(HomeController, [{
-	    key: 'getThunder',
-	    value: function getThunder(_ref) {
-	      var _ref$originalEvent = _ref.originalEvent;
-	      var clientX = _ref$originalEvent.clientX;
-	      var clientY = _ref$originalEvent.clientY;
-	
-	      this.diamond.count += 1;
-	
-	      $('.thunder-wrap').css('left', clientX);
-	      $('.thunder-wrap').css('top', clientY - 90);
-	      $('.thunder').css('animation', 'thunder 0.5s linear');
-	      setTimeout(function () {
-	        return $('.thunder').css('animation', 'initial');
-	      }, 500);
+	        this.name = 'home';
+	        this.diamond = diamond;
+	        $interval(function () {
+	            _this.diamond.count = _this.diamond.count + _this.diamond.rate / 20;
+	        }, 50);
 	    }
-	  }]);
 	
-	  return HomeController;
+	    _createClass(HomeController, [{
+	        key: 'getThunder',
+	        value: function getThunder(_ref) {
+	            var _ref$originalEvent = _ref.originalEvent;
+	            var clientX = _ref$originalEvent.clientX;
+	            var clientY = _ref$originalEvent.clientY;
+	
+	            this.diamond.count += 1;
+	
+	            $('.thunder-wrap').css('left', clientX);
+	            $('.thunder-wrap').css('top', clientY - 90);
+	            $('.thunder').css('animation', 'thunder 0.5s linear');
+	            setTimeout(function () {
+	                return $('.thunder').css('animation', 'initial');
+	            }, 500);
+	        }
+	    }]);
+	
+	    return HomeController;
 	}();
 	
 	exports.default = HomeController;
@@ -37553,7 +37665,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n  <h1>{{ heroCtrl.name }} Component</h1>\n</div>\n";
+	module.exports = "<div>\r\n  <h1>{{ heroCtrl.name }} Component</h1>\r\n</div>\r\n";
 
 /***/ },
 /* 20 */
@@ -37664,7 +37776,7 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav> \n  <h1>{{ navBarCtrl.name }} NAV BAR NAV BAR</h1>\n</nav>\n";
+	module.exports = "<nav> \r\n  <h1>{{ navBarCtrl.name }} NAV BAR NAV BAR</h1>\r\n</nav>\r\n";
 
 /***/ },
 /* 25 */
@@ -37747,7 +37859,7 @@
 /* 28 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n  <h1>{{ buttonCtrl.name }}</h1>\n</div>\n";
+	module.exports = "<div>\r\n  <h1>{{ buttonCtrl.name }}</h1>\r\n</div>\r\n";
 
 /***/ },
 /* 29 */
@@ -37837,7 +37949,9 @@
 	var diamondService = function diamondServiceFn() {
 	  return {
 	    count: 1000,
-	    rate: 1
+	    rate: 1,
+	    total_productivity: 0,
+	    diversity_ratio: 1
 	  };
 	};
 	
@@ -37974,7 +38088,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".wrap {\n  background: #1B2B2F;\n  font-family: sans-serif;\n  height: 100vh; }\n\n.earth {\n  height: 200px;\n  width: 200px;\n  border-radius: 50%;\n  background-color: #3380B5;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: hidden;\n  z-index: 2;\n  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.2), 0 0 0 120px rgba(20, 106, 221, 0.1), 0 0 0 300px rgba(20, 106, 221, 0.1), 0 0 0 500px rgba(20, 106, 221, 0.1); }\n\n.cursor {\n  cursor: pointer; }\n\n/* Land */\n.earth:before {\n  content: \"\";\n  position: absolute;\n  background: #85C567;\n  height: 30px;\n  width: 75px;\n  left: 0;\n  top: 50px;\n  display: block;\n  border-radius: 40px;\n  animation: rotateElement linear 25s infinite;\n  box-shadow: 0px 75px 0 -5px #85C567, 5px 35px 0 -3px #85C567, 35px 125px 0 -9px #85C567, 120px -15px 0 -7px #85C567, 135px -55px 0 -9px #85C567, 150px 25px 0 7px #85C567, 220px 70px 0 -2px #85C567, 235px -35px 0 -3px #85C567, 280px 85px 0 3px #85C567, 320px 30px 0 1px #85C567, 400px 0 0 0 #85C567, 400px 75px 0 -5px #85C567, 405px 35px 0 -3px #85C567, 435px 125px 0 -9px #85C567, 520px -15px 0 -7px #85C567, 535px -55px 0 -9px #85C567, 550px 25px 0 7px #85C567, 620px 70px 0 -2px #85C567, 635px -35px 0 -3px #85C567, 680px 85px 0 3px #85C567, 720px 30px 0 1px #85C567; }\n\n/* Clouds */\n.earth:after {\n  content: \"\";\n  position: absolute;\n  background: white;\n  height: 20px;\n  width: 60px;\n  left: 0px;\n  top: 50px;\n  display: block;\n  border-radius: 40px;\n  animation: rotateElement linear 15s infinite;\n  box-shadow: 10px 50px 0 3px white, 50px -15px 0 2px white, 70px 70px 0 -1px white, 100px 25px 0 1px white, 110px 105px 0 -4px white, 140px 75px 0 -3px white, 250px -25px 0 -1px white, 210px 50px 0 1px white, 340px 130px 0 1px white, 400px 0px 0 0 white, 410px 50px 0 3px white, 500px 25px 0 1px white, 450px -15px 0 2px white, 470px 70px 0 -1px white, 540px 75px 0 -3px white, 510px 105px 0 -4px white, 650px -25px 0 -1px white, 610px 50px 0 1px white, 740px 130px 0 1px white; }\n\n.earth--shadow {\n  height: 100%;\n  width: 100%;\n  border-radius: 50%;\n  position: absolute;\n  background-color: transparent;\n  z-index: 4;\n  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.1); }\n\n.moon {\n  height: 20px;\n  width: 20px;\n  border-radius: 50%;\n  position: absolute;\n  background-color: #A5A5A5;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: auto;\n  z-index: 10;\n  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);\n  animation: moonOrbit ease-in-out 15s infinite; }\n\n.moon:after {\n  content: '';\n  height: 5px;\n  width: 5px;\n  border-radius: 50%;\n  background: gray;\n  position: absolute;\n  top: 8px;\n  left: 10px;\n  box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray; }\n\n.moon2 {\n  height: 20px;\n  width: 20px;\n  border-radius: 50%;\n  position: absolute;\n  background-color: #3Af6AB;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: auto;\n  z-index: 10;\n  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);\n  animation: moonOrbit ease-in-out 5s infinite; }\n\n.moon2:after {\n  content: '';\n  height: 5px;\n  width: 5px;\n  border-radius: 50%;\n  background: gray;\n  position: absolute;\n  top: 8px;\n  left: 10px;\n  box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray; }\n\n.stars {\n  height: 10px;\n  width: 10px;\n  border-radius: 50%;\n  position: absolute;\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: auto;\n  z-index: 1;\n  box-shadow: 510px -450px 0 1px white, 490px -125px 0 -2px white, 150px -150px 0 -1px white, 130px 270px 0 -1px white, 480px 475px 0 -3px white, -610px 605px 0 -4px white, 570px 750px 0 -3px white, -550px 425px 0 1px white, 650px -105px 0 -2px white, 310px 60px 0 -1px white, -340px 175px 0 -3px white, -610px 1205px 0 -4px white, 500px 450px 0 -3px white, -500px 125px 0 1px white, -150px -615px 0 -2px white, -110px -370px 0 -1px white, -440px -175px 0 -3px white, -610px -205px 0 -4px white, 410px -450px 0 -3px white, 390px -125px 0 -2px white, 50px -250px 0 -1px white, 30px -170px 0 -1px white, 380px 375px 0 -5px white, -710px 705px 0 -6px white, 470px -650px 0 -3px white, -450px 425px 0 1px white, 550px -205px 0 -5px white, 210px 50px 0 -1px white, -240px 275px 0 -5px white, -510px 120px 0 -4px white, 600px 550px 0 -3px white, -400px 225px 0 1px white, -250px -515px 0 -2px white, -310px -170px 0 -4px white, -340px -275px 0 -4px white, -510px -305px 0 -5px white; }\n\n.inspiration {\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  color: white;\n  font-size: 10px; }\n  .inspiration a {\n    color: white; }\n\n@keyframes rotateElement {\n  0% {\n    transform: translate(0, 0); }\n  100% {\n    transform: translate(-400px, 0); } }\n\n@keyframes moonOrbit {\n  0% {\n    transform: translate(-250px, 0);\n    z-index: 10; }\n  20% {\n    z-index: -1; }\n  50% {\n    transform: translate(250px, 0); }\n  100% {\n    transform: translate(-250px, 0); } }\n\n.thunder {\n  position: absolute;\n  z-index: 999;\n  bottom: 100px;\n  left: 65px;\n  width: 20px;\n  height: 38px;\n  background: #f9db62;\n  transform: skew(-25deg);\n  opacity: 0; }\n\n.thunder:before {\n  content: '';\n  position: absolute;\n  top: 21px;\n  left: 0px;\n  width: 39px;\n  height: 17px;\n  background: #f9db62; }\n\n.thunder:after {\n  content: '';\n  position: absolute;\n  width: 0;\n  height: 0;\n  top: 37px;\n  right: -21px;\n  border-left: 12px solid transparent;\n  border-right: 5px solid transparent;\n  border-top: 41px solid #f9db62;\n  transform: skew(5deg); }\n\n@keyframes thunder {\n  0% {\n    opacity: 0;\n    top: 25%;\n    left: 50%; }\n  4% {\n    opacity: 1;\n    top: 27%;\n    left: 50%; }\n  35% {\n    opacity: 1;\n    top: 30%;\n    left: 50%; }\n  42% {\n    opacity: 1;\n    top: 30%;\n    left: 50%; }\n  73% {\n    opacity: 0; }\n  100% {\n    opacity: 0;\n    left: 50%; } }\n\n.topPanel {\n  position: fixed;\n  left: 50%;\n  margin-left: -150px;\n  text-align: center;\n  z-index: 10;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 300px;\n  height: 91px;\n  background: rgba(0, 0, 25, 0.5);\n  border: 2px solid rgba(255, 255, 255, 0.7);\n  border-radius: 0 0 10px 10px;\n  border-top: none;\n  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);\n  transition: all 0.1s linear; }\n\n.topPanel:hover {\n  box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.5); }\n\n.diamondIcon {\n  position: relative;\n  top: -2px;\n  color: #5cbcff; }\n\n.diamondCount {\n  font-size: 30px; }\n\n.diamondCountWrap {\n  display: flex;\n  justify-content: center;\n  margin-bottom: 5px; }\n\n.leftTitle {\n  font-size: 30px;\n  margin: auto; }\n\n.leftPanelImageWrap {\n  width: 75px;\n  height: 75px;\n  overflow: hidden;\n  background-size: cover !important;\n  background-repeat: no-repeat !important;\n  margin: auto 10px;\n  border-radius: 75px;\n  border: 2px solid rgba(255, 255, 255, 0.75);\n  background-position: center; }\n\n.leftPhotoName {\n  padding-top: 10px;\n  font-size: 20px; }\n\n.leftPhotoWrap {\n  margin-left: 5px;\n  margin-top: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center; }\n\n.leftPhotoWrap .header {\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.75); }\n\n.leftPhotoWrap .attribute {\n  font-size: 15px; }\n\n.attribute.inner .attr-icon {\n  width: 50px;\n  position: relative;\n  top: 13px;\n  margin-left: 15px; }\n\n.attribute.inner span {\n  font-size: 30px;\n  color: #555; }\n\n.attr-icon {\n  position: relative;\n  top: 5px;\n  width: 22px; }\n\n.attr-icon.big {\n  width: 40px; }\n\n.zooImg {\n  width: 100px !important; }\n\n.left-attr-column {\n  margin-right: 8px; }\n\n.left-attr-number {\n  color: rgba(255, 255, 255, 0.5); }\n\n#upgradeModal.modal .upgrade-modal-header {\n  background-color: #183a5d;\n  color: rgba(255, 255, 255, 0.75); }\n\n#upgradeModal.modal .upgrade-modal-content {\n  background-color: #0a2232; }\n  #upgradeModal.modal .upgrade-modal-content .ui.header {\n    color: rgba(255, 255, 255, 0.75); }\n\n.icon {\n  color: white; }\n\n.rightIcons {\n  margin: 10px 0;\n  cursor: pointer;\n  color: rgba(255, 255, 255, 0.5); }\n\n.rightIcons:hover {\n  color: rgba(255, 255, 255, 0.75); }\n\n.closeBtn {\n  position: relative;\n  top: 10px;\n  left: 10px; }\n\n.animalList {\n  height: calc(100% - 80px);\n  overflow: scroll;\n  background-color: #0a2232; }\n\n.animalWrap {\n  display: flex;\n  padding: 8px 0; }\n\n.animalWrap.top {\n  height: 70px; }\n\n.animalWrap:hover {\n  background-color: rgba(255, 255, 255, 0.08);\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Chrome/Safari/Opera */\n  -khtml-user-select: none;\n  /* Konqueror */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                  not supported by any browser */ }\n\n.animalWrap img {\n  max-width: 100px;\n  max-height: 80px; }\n\n.rightTitle {\n  font-size: 30px;\n  margin: auto; }\n\n.rightPhotoWrap {\n  margin-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding-top: 5px; }\n\n.rightPhotoName {\n  font-size: 18px;\n  line-height: 24px;\n  color: rgba(255, 255, 255, 0.75); }\n\n.rightPhotoWrap .header {\n  font-size: 20px;\n  line-height: 45px; }\n\n.rightPhotoWrap .description {\n  font-size: 18px;\n  line-height: 24px; }\n\n.rightPanelWrap {\n  display: flex;\n  height: 100vh; }\n\n.panelTitle {\n  display: flex;\n  background-color: #183a5d;\n  height: 80px;\n  color: rgba(255, 255, 255, 0.75); }\n\n.rightActionBtnWrap {\n  justify-content: flex-end;\n  margin: auto;\n  flex: 1;\n  display: flex; }\n\n.iconWrap {\n  display: flex;\n  flex-direction: row;\n  align-self: flex-end;\n  margin: 20px auto;\n  z-index: 10; }\n\n.diamond-insufficient {\n  background-color: rgba(0, 0, 0, 0.3); }\n\n.diamond-insufficient:hover {\n  background-color: rgba(0, 0, 0, 0.3);\n  cursor: no-drop; }\n\n.insufImage {\n  -webkit-filter: grayscale(100%) opacity(0.3) blur(1px);\n  -khtml-filter: grayscale(100%) opacity(0.3) blur(1px);\n  -moz-filter: grayscale(100%) opacity(0.3) blur(1px);\n  -ms-filter: grayscale(100%) opacity(0.3) blur(1px);\n  filter: grayscale(100%) opacity(0.3) blur(1px);\n  border: 2px solid rgba(60, 49, 49, 0.75); }\n\n.insufName {\n  color: #333333; }\n\n.rightPanelImageWrap {\n  width: 75px;\n  height: 75px;\n  overflow: hidden;\n  background-size: cover !important;\n  background-repeat: no-repeat !important;\n  margin: auto 10px;\n  border-radius: 75px;\n  border: 2px solid rgba(255, 255, 255, 0.75);\n  background-position: center; }\n\n.right-animal-diamond {\n  color: #5cbcff; }\n\n.right-animal-cost {\n  color: #5cbcff; }\n\n.insufCost {\n  color: rgba(60, 49, 49, 0.75); }\n\n.insufDiamond {\n  color: rgba(60, 49, 49, 0.75); }\n\n.right-animal-info {\n  color: rgba(255, 255, 255, 0.25); }\n  .right-animal-info:hover {\n    color: rgba(255, 255, 255, 0.75); }\n\n#infoModal .info-modal-header {\n  background-color: #183a5d;\n  color: rgba(255, 255, 255, 0.75); }\n\n#infoModal .info-modal-content {\n  background-color: #0a2232; }\n  #infoModal .info-modal-content .ui.header {\n    color: rgba(255, 255, 255, 0.75); }\n\n* {\n  font-family: 'Baloo Paaji', cursive; }\n\nbody {\n  color: #EFEFEF; }\n", ""]);
+	exports.push([module.id, ".wrap {\n  background: #1B2B2F;\n  font-family: sans-serif;\n  height: 100vh; }\n\n.earth {\n  height: 200px;\n  width: 200px;\n  border-radius: 50%;\n  background-color: #3380B5;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: hidden;\n  z-index: 2;\n  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.2), 0 0 0 120px rgba(20, 106, 221, 0.1), 0 0 0 300px rgba(20, 106, 221, 0.1), 0 0 0 500px rgba(20, 106, 221, 0.1); }\n\n.cursor {\n  cursor: pointer; }\n\n/* Land */\n.earth:before {\n  content: \"\";\n  position: absolute;\n  background: #85C567;\n  height: 30px;\n  width: 75px;\n  left: 0;\n  top: 50px;\n  display: block;\n  border-radius: 40px;\n  animation: rotateElement linear 25s infinite;\n  box-shadow: 0px 75px 0 -5px #85C567, 5px 35px 0 -3px #85C567, 35px 125px 0 -9px #85C567, 120px -15px 0 -7px #85C567, 135px -55px 0 -9px #85C567, 150px 25px 0 7px #85C567, 220px 70px 0 -2px #85C567, 235px -35px 0 -3px #85C567, 280px 85px 0 3px #85C567, 320px 30px 0 1px #85C567, 400px 0 0 0 #85C567, 400px 75px 0 -5px #85C567, 405px 35px 0 -3px #85C567, 435px 125px 0 -9px #85C567, 520px -15px 0 -7px #85C567, 535px -55px 0 -9px #85C567, 550px 25px 0 7px #85C567, 620px 70px 0 -2px #85C567, 635px -35px 0 -3px #85C567, 680px 85px 0 3px #85C567, 720px 30px 0 1px #85C567; }\n\n/* Clouds */\n.earth:after {\n  content: \"\";\n  position: absolute;\n  background: white;\n  height: 20px;\n  width: 60px;\n  left: 0px;\n  top: 50px;\n  display: block;\n  border-radius: 40px;\n  animation: rotateElement linear 15s infinite;\n  box-shadow: 10px 50px 0 3px white, 50px -15px 0 2px white, 70px 70px 0 -1px white, 100px 25px 0 1px white, 110px 105px 0 -4px white, 140px 75px 0 -3px white, 250px -25px 0 -1px white, 210px 50px 0 1px white, 340px 130px 0 1px white, 400px 0px 0 0 white, 410px 50px 0 3px white, 500px 25px 0 1px white, 450px -15px 0 2px white, 470px 70px 0 -1px white, 540px 75px 0 -3px white, 510px 105px 0 -4px white, 650px -25px 0 -1px white, 610px 50px 0 1px white, 740px 130px 0 1px white; }\n\n.earth--shadow {\n  height: 100%;\n  width: 100%;\n  border-radius: 50%;\n  position: absolute;\n  background-color: transparent;\n  z-index: 4;\n  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.1); }\n\n.moon {\n  height: 20px;\n  width: 20px;\n  border-radius: 50%;\n  position: absolute;\n  background-color: #A5A5A5;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: auto;\n  z-index: 10;\n  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);\n  animation: moonOrbit ease-in-out 15s infinite; }\n\n.moon:after {\n  content: '';\n  height: 5px;\n  width: 5px;\n  border-radius: 50%;\n  background: gray;\n  position: absolute;\n  top: 8px;\n  left: 10px;\n  box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray; }\n\n.moon2 {\n  height: 20px;\n  width: 20px;\n  border-radius: 50%;\n  position: absolute;\n  background-color: #3Af6AB;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: auto;\n  z-index: 10;\n  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);\n  animation: moonOrbit ease-in-out 5s infinite; }\n\n.moon2:after {\n  content: '';\n  height: 5px;\n  width: 5px;\n  border-radius: 50%;\n  background: gray;\n  position: absolute;\n  top: 8px;\n  left: 10px;\n  box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray; }\n\n.stars {\n  height: 10px;\n  width: 10px;\n  border-radius: 50%;\n  position: absolute;\n  background-color: white;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  overflow: auto;\n  z-index: 1;\n  box-shadow: 510px -450px 0 1px white, 490px -125px 0 -2px white, 150px -150px 0 -1px white, 130px 270px 0 -1px white, 480px 475px 0 -3px white, -610px 605px 0 -4px white, 570px 750px 0 -3px white, -550px 425px 0 1px white, 650px -105px 0 -2px white, 310px 60px 0 -1px white, -340px 175px 0 -3px white, -610px 1205px 0 -4px white, 500px 450px 0 -3px white, -500px 125px 0 1px white, -150px -615px 0 -2px white, -110px -370px 0 -1px white, -440px -175px 0 -3px white, -610px -205px 0 -4px white, 410px -450px 0 -3px white, 390px -125px 0 -2px white, 50px -250px 0 -1px white, 30px -170px 0 -1px white, 380px 375px 0 -5px white, -710px 705px 0 -6px white, 470px -650px 0 -3px white, -450px 425px 0 1px white, 550px -205px 0 -5px white, 210px 50px 0 -1px white, -240px 275px 0 -5px white, -510px 120px 0 -4px white, 600px 550px 0 -3px white, -400px 225px 0 1px white, -250px -515px 0 -2px white, -310px -170px 0 -4px white, -340px -275px 0 -4px white, -510px -305px 0 -5px white; }\n\n.inspiration {\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  color: white;\n  font-size: 10px; }\n  .inspiration a {\n    color: white; }\n\n@keyframes rotateElement {\n  0% {\n    transform: translate(0, 0); }\n  100% {\n    transform: translate(-400px, 0); } }\n\n@keyframes moonOrbit {\n  0% {\n    transform: translate(-250px, 0);\n    z-index: 10; }\n  20% {\n    z-index: -1; }\n  50% {\n    transform: translate(250px, 0); }\n  100% {\n    transform: translate(-250px, 0); } }\n\n.thunder-wrap {\n  position: absolute; }\n\n.thunder {\n  position: absolute;\n  z-index: 999;\n  bottom: 100px;\n  left: 65px;\n  width: 20px;\n  height: 38px;\n  background: #f9db62;\n  transform: skew(-25deg);\n  opacity: 0; }\n\n.thunder:before {\n  content: '';\n  position: absolute;\n  top: 21px;\n  left: 0px;\n  width: 39px;\n  height: 17px;\n  background: #f9db62; }\n\n.thunder:after {\n  content: '';\n  position: absolute;\n  width: 0;\n  height: 0;\n  top: 37px;\n  right: -21px;\n  border-left: 12px solid transparent;\n  border-right: 5px solid transparent;\n  border-top: 41px solid #f9db62;\n  transform: skew(5deg); }\n\n@keyframes thunder {\n  0% {\n    opacity: 0;\n    top: 25%;\n    left: 50%; }\n  4% {\n    opacity: 1;\n    top: 27%;\n    left: 50%; }\n  35% {\n    opacity: 1;\n    top: 30%;\n    left: 50%; }\n  42% {\n    opacity: 1;\n    top: 30%;\n    left: 50%; }\n  73% {\n    opacity: 0; }\n  100% {\n    opacity: 0;\n    left: 50%; } }\n\n.topPanel {\n  position: fixed;\n  left: 50%;\n  margin-left: -150px;\n  text-align: center;\n  z-index: 10;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 300px;\n  height: 91px;\n  background: rgba(0, 0, 25, 0.5);\n  border: 2px solid rgba(255, 255, 255, 0.7);\n  border-radius: 0 0 10px 10px;\n  border-top: none;\n  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);\n  transition: all 0.1s linear; }\n\n.topPanel:hover {\n  box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.5); }\n\n.diamondIcon {\n  position: relative;\n  top: -2px;\n  color: #5cbcff; }\n\n.diamondCount {\n  font-size: 30px; }\n\n.diamondCountWrap {\n  display: flex;\n  justify-content: center;\n  margin-bottom: 5px; }\n\n.leftTitle {\n  font-size: 30px;\n  margin: auto; }\n\n.leftPanelImageWrap {\n  width: 75px;\n  height: 75px;\n  overflow: hidden;\n  background-size: cover !important;\n  background-repeat: no-repeat !important;\n  margin: auto 10px;\n  border-radius: 75px;\n  border: 2px solid rgba(255, 255, 255, 0.75);\n  background-position: center; }\n\n.leftPhotoName {\n  padding-top: 10px;\n  font-size: 20px; }\n\n.leftPhotoWrap {\n  margin-left: 5px;\n  margin-top: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center; }\n\n.leftPhotoWrap .header {\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.75); }\n\n.leftPhotoWrap .attribute {\n  font-size: 15px; }\n\n.attribute.inner .attr-icon {\n  width: 50px;\n  position: relative;\n  top: 13px;\n  margin-left: 15px; }\n\n.attribute.inner span {\n  font-size: 30px;\n  color: #555; }\n\n.attr-icon {\n  position: relative;\n  top: 5px;\n  width: 22px; }\n\n.attr-icon.big {\n  width: 40px; }\n\n.zooImg {\n  width: 100px !important; }\n\n.left-attr-column {\n  margin-right: 8px; }\n\n.left-attr-number {\n  color: rgba(255, 255, 255, 0.5); }\n\n.animal-description {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  font-size: 30px; }\n\n#upgradeModal.modal .upgrade-modal-header {\n  background-color: #183a5d;\n  color: rgba(255, 255, 255, 0.75); }\n\n#upgradeModal.modal .upgrade-modal-content {\n  background-color: #0a2232; }\n  #upgradeModal.modal .upgrade-modal-content .ui.header {\n    color: rgba(255, 255, 255, 0.75); }\n\n#upgradeModal.modal .column {\n  flex-direction: column;\n  align-items: center; }\n\n.icon {\n  color: white; }\n\n.rightIcons {\n  margin: 10px 0;\n  cursor: pointer;\n  color: rgba(255, 255, 255, 0.5); }\n\n.rightIcons:hover {\n  color: rgba(255, 255, 255, 0.75); }\n\n.closeBtn {\n  position: relative;\n  top: 10px;\n  left: 10px; }\n\n.animalList {\n  height: calc(100% - 80px);\n  overflow: scroll;\n  background-color: #0a2232; }\n\n.animalWrap {\n  display: flex;\n  padding: 8px 0; }\n\n.animalWrap.top {\n  height: 70px; }\n\n.animalWrap:hover {\n  background-color: rgba(255, 255, 255, 0.08);\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Chrome/Safari/Opera */\n  -khtml-user-select: none;\n  /* Konqueror */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\r\n                                  not supported by any browser */ }\n\n.animalWrap img {\n  max-width: 100px;\n  max-height: 80px; }\n\n.rightTitle {\n  font-size: 30px;\n  margin: auto; }\n\n.rightPhotoWrap {\n  margin-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding-top: 5px; }\n\n.rightPhotoName {\n  font-size: 18px;\n  line-height: 24px;\n  color: rgba(255, 255, 255, 0.75); }\n\n.rightPhotoWrap .header {\n  font-size: 20px;\n  line-height: 45px; }\n\n.rightPhotoWrap .description {\n  font-size: 18px;\n  line-height: 24px; }\n\n.rightPanelWrap {\n  display: flex;\n  height: 100vh; }\n\n.panelTitle {\n  display: flex;\n  background-color: #183a5d;\n  height: 80px;\n  color: rgba(255, 255, 255, 0.75); }\n\n.rightActionBtnWrap {\n  justify-content: flex-end;\n  margin: auto;\n  flex: 1;\n  display: flex; }\n\n.iconWrap {\n  display: flex;\n  flex-direction: row;\n  align-self: flex-end;\n  margin: 20px auto;\n  z-index: 10; }\n\n.diamond-insufficient {\n  background-color: rgba(0, 0, 0, 0.3); }\n\n.diamond-insufficient:hover {\n  background-color: rgba(0, 0, 0, 0.3);\n  cursor: no-drop; }\n\n.insufImage {\n  -webkit-filter: grayscale(100%) opacity(0.3) blur(1px);\n  -khtml-filter: grayscale(100%) opacity(0.3) blur(1px);\n  -moz-filter: grayscale(100%) opacity(0.3) blur(1px);\n  -ms-filter: grayscale(100%) opacity(0.3) blur(1px);\n  filter: grayscale(100%) opacity(0.3) blur(1px);\n  border: 2px solid rgba(60, 49, 49, 0.75); }\n\n.insufName {\n  color: #333333; }\n\n.rightPanelImageWrap {\n  width: 75px;\n  height: 75px;\n  overflow: hidden;\n  background-size: cover !important;\n  background-repeat: no-repeat !important;\n  margin: auto 10px;\n  border-radius: 75px;\n  border: 2px solid rgba(255, 255, 255, 0.75);\n  background-position: center; }\n\n.right-animal-diamond {\n  color: #5cbcff; }\n\n.right-animal-cost {\n  color: #5cbcff; }\n\n.insufCost {\n  color: rgba(60, 49, 49, 0.75); }\n\n.insufDiamond {\n  color: rgba(60, 49, 49, 0.75); }\n\n.right-animal-info {\n  color: rgba(255, 255, 255, 0.25); }\n  .right-animal-info:hover {\n    color: rgba(255, 255, 255, 0.75); }\n\n#infoModal .info-modal-header {\n  background-color: #183a5d;\n  color: rgba(255, 255, 255, 0.75); }\n\n#infoModal .info-modal-content {\n  background-color: #0a2232; }\n  #infoModal .info-modal-content .ui.header {\n    color: rgba(255, 255, 255, 0.75); }\n\n* {\n  font-family: 'Baloo Paaji', cursive; }\n\nbody {\n  color: #EFEFEF; }\n", ""]);
 	
 	// exports
 
