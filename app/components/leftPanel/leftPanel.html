@@ -1,5 +1,5 @@
 <div class='leftPanel'>
-    <div class="ui sidebar inverted vertical menu" id="leftPanel">
+    <div class="ui sidebar wide inverted vertical menu" id="leftPanel">
         <div class="panelTitle">
             <div class="leftTitle">ZOO</div>
             <!-- <i class="ui chevron left large icon cursor" ng-click="leftPanelCtrl.closePanel()"></i> -->
@@ -43,30 +43,32 @@
                     <img ng-src="{{leftPanelCtrl.getMixImageUrl(leftPanelCtrl.currentAnimal) }}">
                 </div>
                 <div class="animal-description">
-                    <div style='display:flex;' ng-init="leftPanelCtrl.isEditMode = false">
+                    <div style='display:flex;margin-top: 30px;' ng-init="leftPanelCtrl.isEditMode = false">
                         <div class="ui header" ng-hide="leftPanelCtrl.isEditMode" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode">{{leftPanelCtrl.currentAnimal.name}}</div>
                         <input class="ui input" type="text" ng-show="leftPanelCtrl.isEditMode" ng-model="leftPanelCtrl.currentAnimal.name" ng-keypress="leftPanelCtrl.renameAnimal($event)" >
                         <i class="ui edit icon" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode"></i>
                     </div>
                     <div class="attribute inner">
                         <span class="left-attr-column">
-                            <img class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="">
+                            <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(0)">
                             <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[0]}}</span>
                         </span>
                         <span class="left-attr-column">
-                            <img class="attr-icon" src="//i.imgur.com/ztfDn80.png" alt="">
+                            <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/ztfDn80.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(1)">
                             <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[1]}}</span>
                         </span>
                         <span class="left-attr-column">
-                            <img class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="">
+                            <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(2)">
                             <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[2]}}</span>
                         </span>
                     </div>
                 </div>
 
-                <div ng-click="leftPanelCtrl.upgradeAnimal(0)">upgrade fire</div>
-                <div ng-click="leftPanelCtrl.upgradeAnimal(1)">upgrade ice</div>
-                <div ng-click="leftPanelCtrl.upgradeAnimal(2)">upgrade lightening</div>
+                <div class="ui header"><span ng-if="leftPanelCtrl.currentAnimal.sumlevels === 3">Max </span>Lv. {{leftPanelCtrl.currentAnimal.sumlevels}}</div>
+
+                <!-- <div ng-click="leftPanelCtrl.upgradeAnimal(0)">upgrade fire</div> -->
+                <!-- <div ng-click="leftPanelCtrl.upgradeAnimal(1)">upgrade ice</div> -->
+                <!-- <div ng-click="leftPanelCtrl.upgradeAnimal(2)">upgrade lightening</div> -->
                 <!-- <div class="ui segment">
                     <p>Hi 小魯～</p>
                     <p>嘻嘻</p>

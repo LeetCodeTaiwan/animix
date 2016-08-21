@@ -66,8 +66,8 @@ export default class RightPanelController {
                 "name": "雲豹",
                 "img": "CloudedLeopard-O.jpg",
                 "description": {"_id":"253","A_Name_Ch":"雲豹","A_Summary":"","A_Keywords":"","A_AlsoKnown":"","A_Geo":"MULTIPOINT ((121.5799735 24.9978317))","A_Location":"臺灣動物區","A_POIGroup":"","A_Name_En":"Formosan clouded leopard","A_Name_Latin":"Neofelis nebulosa","A_Phylum":"脊索動物門","A_Class":"哺乳綱","A_Order":"食肉目","A_Family":"貓科","A_Conservation":"","A_Distribution":"臺灣","A_Habitat":"中、高海拔森林區","A_Feature":"全身黃褐色；額頭至肩部有數條黑色縱帶，頸側及體側有雲黑班，腹部近白色，尾有11至14個黑色環帶。貓科雲豹的一個亞種，為台灣特有種動物，是台灣本島少數的大型肉食野生動物之一。雲豹是晨昏活動頻繁而偏夜行性的動物，常單獨活動。白天棲息在樹幹上或斷崖的岩石下面，到夜晚才現身伏擊行徑上的動物。但它並非完全是樹棲性，也常在地上行走或是撲追動物。可能的棲地為原始或次生闊葉林、混合林或針葉林。","A_Behavior":"單獨、夜行性","A_Diet":"","A_Crisis":"","A_Interpretation":"","A_Theme_Name":"","A_Theme_URL":"","A_Adopt":"","A_Code":"CloudedLeopard","A_Pic01_ALT":"雲豹","A_Pic01_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/CloudedLeopard/CloudedLeopard_Pic01.jpg","A_Pic02_ALT":"雲豹","A_Pic02_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/CloudedLeopard/CloudedLeopard_Pic02.jpg","A_Pic03_ALT":"雲豹","A_Pic03_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/CloudedLeopard/CloudedLeopard_Pic03.jpg","A_Pic04_ALT":"雲豹","A_Pic04_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/CloudedLeopard/CloudedLeopard_Pic04.jpg","A_pdf01_ALT":"","A_pdf01_URL":"","A_pdf02_ALT":"","A_pdf02_URL":"","A_Voice01_ALT":"","A_Voice01_URL":"","A_Voice02_ALT":"","A_Voice02_URL":"","A_Voice03_ALT":"","A_Voice03_URL":"","A_Vedio_URL":"","A_Update":"2015-11-23","A_CID":"252"},
-                "cost": 1000000,
-                "productivity": 20000
+                "cost": 10000000,
+                "productivity": 200000
             },
             {
                 "id": 7,
@@ -75,8 +75,8 @@ export default class RightPanelController {
                 "name": "孟加拉虎",
                 "img": "Tiger-O.jpg",
                 "description": {"A_Name_Ch":"孟加拉虎","A_Summary":"","A_Keywords":"老虎","A_AlsoKnown":"","A_Geo":"MULTIPOINT ((121.5833692 24.9940162))","A_Location":"亞洲熱帶雨林區","A_POIGroup":"","A_Name_En":"Bengal tiger","A_Name_Latin":"Panthera tigris tigris","A_Phylum":"脊索動物門","A_Class":"哺乳綱","A_Order":"食肉目","A_Family":"貓科","A_Conservation":"","A_Distribution":"亞洲","A_Habitat":"雨林，森林，紅樹林沼澤，溫帶與熱帶草原，岩石地區(多樣化，只要有足夠的水源，獵物及遮陽處)","A_Feature":"長度 頭臀170~229公分(140~280公分);尾巴95~119公分 高度 肩高91公分 體重 180~245公斤(雄性90~306公斤，雌性65-167公斤) 齒數 28~30(3/3 1/1 2-3/2 1/1) 外觀 在貓科中體型最大;黃褐色的背部和側面有黑色條詨，腹部、下巴及喉嚨為白色.雄性比雌性大，下巴長有鬍鬚般的毛髮。。","A_Behavior":"活動時間 黃昏、夜行性;偶爾會在日間活動 群數 單獨生活，除了母親與幼獸以外 其他 不喜愛炎熱的天氣，尋找陰涼的森林睡覺。天氣熱時喜歡泡水，善於游泳，也 會爬樹，但沒有豹顯著的樹棲性傾向。會藏身在有獵物出現的地方附近耐心 埋伏等待，伺機捕捉。用餐時從獵物後腿及臀部吃起，每天平均吃6~7公 斤，會儲存剩餘食物。基本上是單獨活動，但這不代表動物間沒有互相影響; 牠們經由聽覺與嗅覺保持連繫，肛門腺會分泌一種氣味強烈的液體，有劃分 範圍和標示行跡的作用。雌性在動情期間會很頻繁地活動及發出聲音來向雄 性通知;一隻雌虎看中一隻雄虎後，牠會在雄虎前走過來晃過去，並用尾撩 撥雄虎的背。平時很安靜，只有求偶時大聲吼叫。","A_Diet":"肉食性;大型哺乳動物:豬，鹿，羚羊，水牛;偶翼也吃小型哺乳動物和鳥","A_Crisis":"","A_Interpretation":"","A_Theme_Name":"","A_Theme_URL":"","A_Adopt":"","A_Code":"Tiger","A_Pic01_ALT":"孟加拉虎","A_Pic01_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tiger/Tiger_Pic01.jpg","A_Pic02_ALT":"孟加拉虎","A_Pic02_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tiger/Tiger_Pic02.jpg","A_Pic03_ALT":"孟加拉虎","A_Pic03_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tiger/Tiger_Pic03.jpg","A_Pic04_ALT":"孟加拉虎","A_Pic04_URL":"http://www.zoo.gov.tw/iTAP/03_Animals/RainForest/Tiger/Tiger_Pic04.jpg","A_pdf01_ALT":"","A_pdf01_URL":"","A_pdf02_ALT":"","A_pdf02_URL":"","A_Voice01_ALT":"","A_Voice01_URL":"","A_Voice02_ALT":"","A_Voice02_URL":"","A_Voice03_ALT":"","A_Voice03_URL":"","A_Vedio_URL":"","A_Update":"2015-11-23","A_CID":"11"},
-                "cost": 1000000,
-                "productivity": 20000
+                "cost": 100000000,
+                "productivity": 2000000
             }
         ]
     }

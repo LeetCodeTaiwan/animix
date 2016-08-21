@@ -55,6 +55,7 @@ export default class LeftPanelController {
 
     openUpgradeModal(animal) {
         this.currentAnimal = animal;
+        this.currentAnimal.sumlevels = this.currentAnimal.levels[0] + this.currentAnimal.levels[1] + this.currentAnimal.levels[2];
         $('#upgradeModal')
             .modal('show');
         var req = {
@@ -96,12 +97,13 @@ export default class LeftPanelController {
     }
 
     upgradeAnimal(attrIdx) {
-        if (this.currentAnimal.levels[attrIdx] < 3 && (this.currentAnimal.levels[0] + this.currentAnimal.levels[1] + this.currentAnimal.levels[2] < 3)) {
+        if (this.currentAnimal.sumlevels < 3) {
             this.currentAnimal.levels[attrIdx] += 1;
             this.diamond.total_productivity += this.currentAnimal.productivity;
             this.diamond.rate = this.diamond.total_productivity * this.diamond.diversity_ratio;
             // TODO: check cost
         }
+        this.currentAnimal.sumlevels = this.currentAnimal.levels[0] + this.currentAnimal.levels[1] + this.currentAnimal.levels[2];
     }
 
     getMixImageUrl(animal) {
