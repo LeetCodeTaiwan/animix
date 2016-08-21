@@ -67,6 +67,78 @@
     box-shadow: inset -30px 0 rgba(0, 0, 0, 0.1);
 }
 
+.lion {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index: 10;
+    animation: lionOrbit ease-in-out 5s infinite;
+}
+
+.lion:after {
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray
+}
+
+.owl {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index: 10;
+    animation: owlOrbit ease-in-out 8s infinite;
+}
+
+.owl:after {
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 30%;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray
+}
+
+.pandas {
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index: 10;
+    animation: pandasOrbit ease-in-out 10s infinite;
+}
+
+.pandas:after {
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 35%;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    box-shadow: -4px 3px 0 -1px gray, 4px 2px 0 -1px gray, -2px -6px 0 -1px gray
+}
+
 .moon {
     height: 20px;
     width: 20px;
@@ -102,7 +174,7 @@
     position: absolute;
     background-color: #3Af6AB;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: auto;
@@ -171,6 +243,54 @@
     }
     100% {
         transform: translate(-250px, 0)
+    }
+}
+
+@keyframes lionOrbit {
+    0% {
+        transform: translate(-160px, 0);
+        z-index: 10
+    }
+    20% {
+        z-index: -1;
+    }
+    75% {
+        transform: translate(150px, 0)
+    }
+    100% {
+        transform: translate(-160px, 0)
+    }
+}
+
+@keyframes pandasOrbit {
+    0% {
+        transform: translate(-140px, 0);
+        z-index: 10
+    }
+    20% {
+        z-index: -1;
+    }
+    70% {
+        transform: translate(150px, 0)
+    }
+    100% {
+        transform: translate(-140px, 0)
+    }
+}
+
+@keyframes owlOrbit {
+    0% {
+        transform: translate(-160px, 0);
+        z-index: 10
+    }
+    20% {
+        z-index: -1;
+    }
+    75% {
+        transform: translate(120px, 0)
+    }
+    100% {
+        transform: translate(-160px, 0)
     }
 }
 
