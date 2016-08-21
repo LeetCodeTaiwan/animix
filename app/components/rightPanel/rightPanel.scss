@@ -60,7 +60,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .rightPhotoName {
@@ -108,13 +108,26 @@
 
 
 .diamond-insufficient {
-  background-color: initial;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .diamond-insufficient:hover {
-  background-color: initial;
+  background-color: rgba(0,0,0,0.3);
+  cursor: no-drop;
 }
 
+.insufImage {
+  -webkit-filter: grayscale(100%) opacity(0.3) blur(1px);
+  -khtml-filter: grayscale(100%) opacity(0.3) blur(1px);
+  -moz-filter: grayscale(100%) opacity(0.3) blur(1px);
+  -ms-filter: grayscale(100%) opacity(0.3) blur(1px);
+  filter: grayscale(100%) opacity(0.3) blur(1px);
+  border: 2px solid rgba(60, 49, 49, 0.75);
+}
+
+.insufName {
+  color: #333333;
+}
 
 .rightPanelImageWrap {
   width: 75px;
@@ -134,6 +147,14 @@
 
 .right-animal-cost {
   color: #5cbcff;
+}
+
+.insufCost {
+  color: rgba(60, 49, 49, 0.75);
+}
+
+.insufDiamond {
+  color: rgba(60, 49, 49, 0.75);
 }
 
 .right-animal-info {

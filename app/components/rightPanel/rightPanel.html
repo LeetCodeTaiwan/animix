@@ -24,16 +24,27 @@
                 <div
                   class="rightPanelImageWrap"
                   style="background-image: url('images/{{animal.img}}')"
-                  ng-class="{'diamond-insufficient': !rightPanelCtrl.enoughDiamond(animal.cost) }"
+                  ng-class="{'insufImage': !rightPanelCtrl.enoughDiamond(animal.cost) }"
                 >
                 </div>
-                <div class="rightPhotoWrap">
-                    <div class="rightPhotoName">
+                <div
+                  class="rightPhotoWrap"
+                >
+                    <div
+                      class="rightPhotoName"
+                      ng-class="{'insufName': !rightPanelCtrl.enoughDiamond(animal.cost) }"
+                    >
                         {{animal.name}}
                     </div>
                     <div class="description">
-                        <i class="diamond icon right-animal-diamond"></i>
-                        <span class="right-animal-cost">{{animal.cost}}</span>
+                        <i
+                          class="diamond icon right-animal-diamond"
+                          ng-class="{'insufDiamond': !rightPanelCtrl.enoughDiamond(animal.cost) }"
+                        ></i>
+                        <span
+                          class="right-animal-cost"
+                          ng-class="{'insufCost': !rightPanelCtrl.enoughDiamond(animal.cost) }"
+                        >{{animal.cost}}</span>
                     </div>
                 </div>
                 <div class="rightActionBtnWrap">
