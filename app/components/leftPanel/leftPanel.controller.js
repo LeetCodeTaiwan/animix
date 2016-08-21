@@ -69,13 +69,13 @@ export default class LeftPanelController {
                 "type": animal.code
             }
         };
-        //
-        // this.fetch(req).then(function(response){
-        //     alert(response);
-        //
-        // }, function(){
-        //     alert('error');
-        // });
+
+        
+        this.fetch(req).then(function(response){
+            console.log(response);
+        }, function(err){
+            console.log(err);
+        });
         // fetch({
         //         method: 'POST',
         //         url: 'http://hackntu-nodered.mybluemix.net/start-talking'
@@ -89,6 +89,27 @@ export default class LeftPanelController {
         //         alert('http get errorCallback');
         //     });
     }
+
+    continueDialog(userInput){
+        var req = {
+            method: 'POST',
+            url: '//hackntu-nodered.mybluemix.net/continue-talking/',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+            },
+            data: {
+                "userInput": userInput
+            }
+        };
+        this.fetch(req).then(function(response){
+            console.log(response);
+        }, function(err){
+            console.log(err);
+        });
+    }
+
     renameAnimal(event) {
         if (event.keyCode === 13) {
             this.isEditMode = false;
@@ -108,8 +129,8 @@ export default class LeftPanelController {
         if (!animal) {
             return ''; }
         let url = 'images/mix/' + animal.code + '_' + this.levelsToImageCode(animal.levels) + '.jpg'
-        console.log(animal.levels);
-        console.log(url);
+        // console.log(animal.levels);
+        // console.log(url);
         return url;
     }
 
