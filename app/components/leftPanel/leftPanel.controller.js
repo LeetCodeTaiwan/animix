@@ -120,11 +120,13 @@ export default class LeftPanelController {
         const messages = this.messages
         this.fetch(req).then(function(response){
           try {
-            messages.push({
-              threadId: animal.uuid,
-              from: 'animal',
-              text: response.data[0]
-            })
+            if (!response.data[0].includes('error')) {
+              messages.push({
+                threadId: animal.uuid,
+                from: 'animal',
+                text: response.data[0]
+              })
+            }
           } catch (e) { console.log(e) }
         }, function(err){
             console.log(err);
