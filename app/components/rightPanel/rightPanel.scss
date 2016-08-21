@@ -108,7 +108,13 @@
 
 
 .diamond-insufficient {
+  background-color: initial;
 }
+
+.diamond-insufficient:hover {
+  background-color: initial;
+}
+
 
 .rightPanelImageWrap {
   width: 75px;

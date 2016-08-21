@@ -2,6 +2,7 @@ export default class RightPanelController {
     constructor(animals, diamond) {
         this.name = 'rightPanel';
         this.diamond = diamond
+        this.ownAnimals = animals
         this.currentAnimal = {};
 
         this.animals = [
