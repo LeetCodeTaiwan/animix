@@ -8,7 +8,7 @@ export default class HomeController {
     }
 
     getThunder ({ originalEvent:{ clientX, clientY } }) {
-      this.diamond.count += 1
+      this.diamond.count += 10
 
       $('.thunder-wrap').css('left', clientX)
       $('.thunder-wrap').css('top', clientY - 90)
