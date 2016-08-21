@@ -1,6 +1,8 @@
 export default class LeftPanelController {
     constructor(animals, diamond, $http) {
         this.diamond = diamond
+        this.messages = []
+        this.messgeToBeSend = ''
         this.zooItems = [{
             "id": 0,
             "code": "cat",
@@ -53,6 +55,42 @@ export default class LeftPanelController {
         $('#leftPanel').sidebar('hide')
     }
 
+    sendMessage (event, currentAnimal) {
+      if (event.keyCode === 13 && this.messgeToBeSend !== '') {
+        var req = {
+            method: 'POST',
+            url: '//hackntu-nodered.mybluemix.net/continue-talking/',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+            },
+            data: {
+                "userInput": this.messgeToBeSend
+            }
+        };
+        const messages = this.messages
+        const messgeToBeSend = this.messgeToBeSend
+        const threadId = currentAnimal.uuid
+        this.messages.push({
+          threadId,
+          from: 'user',
+          text: messgeToBeSend
+        })
+        this.fetch(req).then((response) => {
+            try {
+              messages.push({
+                threadId,
+                from: 'animal',
+                text: response.data[0]
+              })
+            }
+            catch (e) { console.log(e) }
+        })
+        this.messgeToBeSend = ''
+      }
+    }
+
     openUpgradeModal(animal) {
         this.currentAnimal = animal;
         this.currentAnimal.sumlevels = this.currentAnimal.levels[0] + this.currentAnimal.levels[1] + this.currentAnimal.levels[2];
@@ -70,26 +108,42 @@ export default class LeftPanelController {
                 "type": animal.code
             }
         };
-        //
-        // this.fetch(req).then(function(response){
-        //     alert(response);
-        //
-        // }, function(){
-        //     alert('error');
-        // });
-        // fetch({
-        //         method: 'POST',
-        //         url: 'http://hackntu-nodered.mybluemix.net/start-talking'
-        //     }).then(function successCallback(response) {
-        //         // this callback will be called asynchronously
-        //         // when the response is available
-        //         console.log(response);
-        //     }, function errorCallback(response) {
-        //         // called asynchronously if an error occurs
-        //         // or server returns response with an error status.
-        //         alert('http get errorCallback');
-        //     });
+
+
+        const messages = this.messages
+        this.fetch(req).then(function(response){
+          try {
+            messages.push({
+              threadId: animal.uuid,
+              from: 'animal',
+              text: response.data[0]
+            })
+          } catch (e) { console.log(e) }
+        }, function(err){
+            console.log(err);
+        });
     }
+
+    continueDialog(userInput){
+        var req = {
+            method: 'POST',
+            url: '//hackntu-nodered.mybluemix.net/continue-talking/',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+            },
+            data: {
+                "userInput": userInput
+            }
+        };
+        this.fetch(req).then(function(response){
+            console.log(response);
+        }, function(err){
+            console.log(err);
+        });
+    }
+
     renameAnimal(event) {
         if (event.keyCode === 13) {
             this.isEditMode = false;
@@ -110,8 +164,8 @@ export default class LeftPanelController {
         if (!animal) {
             return ''; }
         let url = 'images/mix/' + animal.code + '_' + this.levelsToImageCode(animal.levels) + '.jpg'
-        console.log(animal.levels);
-        console.log(url);
+        // console.log(animal.levels);
+        // console.log(url);
         return url;
     }
 

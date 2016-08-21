@@ -2,7 +2,10 @@
 	<div class="topPanel">
 		<div class="diamondCount">
 			<div class="diamondCountWrap">
-				<i class="ui diamond icon diamondIcon" style="color: #5cbcff;"></i>
+				<i
+					ng-click="homeCtrl.giveMeDiamond()"
+					class="ui diamond icon diamondIcon" style="color: #5cbcff;"
+				></i>
 				<div>{{homeCtrl.diamond.count | number: 0}}</div>
 			</div>
 			<div style="color: rgba(255, 255, 255, 0.5); font-size: 24px;">

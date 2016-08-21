@@ -1,6 +1,6 @@
 let diamondService = function diamondServiceFn () {
   return {
-    count: 2000,
+    count: 10000,
     rate: 1,
     total_productivity: 0,
     diversity_ratio: 1

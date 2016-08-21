@@ -17,4 +17,7 @@ export default class HomeController {
       setTimeout(() => $('.thunder').css('animation', 'initial'), 500)
     }
 
+    giveMeDiamond () {
+      this.diamond.count += 100000000
+    }
 }

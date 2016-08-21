@@ -101,7 +101,68 @@
     }
   }
   .column {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
+}
+
+.leftModalWrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightModalWrapp {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.messageWrap {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 400px;
+  margin: 20px 10px;
+  border: 2px solid #EFEFEF;
+  border-radius: 8px;
+}
+
+.userMsg {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.animalMsg {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+.messageItemWrap {
+  padding: 25px 10px;
+  font-size: 20px;
+  overflow: scroll;
+}
+
+.inputMessage {
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+
+.messageInlineWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageGGGG {
+  width: 250px;
+}
+
+.animalMsgIcon {
+  margin-right: 10px !important;
+}
+
+.userMsgIcon {
+  margin-left: 10px !important;
 }
