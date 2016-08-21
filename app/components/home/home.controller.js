@@ -1,7 +1,8 @@
 export default class HomeController {
-    constructor (diamond, $interval) {
+    constructor (diamond, $interval, currentPlanets) {
         this.name = 'home';
         this.diamond = diamond
+        this.currentPlanets = currentPlanets
         $interval(() => {
           this.diamond.count = this.diamond.count + this.diamond.rate / 20
         }, 50)
