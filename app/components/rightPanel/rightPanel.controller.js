@@ -82,12 +82,11 @@ export default class RightPanelController {
         this.currentAnimal = animal
         $('#infoModal')
             .modal('show');
-        console.log($('#infoModal'))
+        // console.log($('#infoModal'))
     }
 
     buyAnimal(animal) {
         if (this.ownAnimals.length === 0) {
-            console.log('XXXYYY');
             $('#bottomPanel')
             .sidebar('setting', 'dimPage', false)
             // .sidebar('setting', 'closable', false)
@@ -107,7 +106,7 @@ export default class RightPanelController {
             this.diamond.count -= animal.cost
             this.diamond.total_productivity += animal.productivity
             this.diamond.rate = this.diamond.total_productivity * this.diamond.diversity_ratio
-            console.log(this.ownAnimals);
+            // console.log(this.ownAnimals);
 
             // let planet_num = this.ownAnimals.length
             // console.log(planet_num)
@@ -115,9 +114,9 @@ export default class RightPanelController {
             if (animal.icon) {
                 this.currentPlanets.push({"classname": animal.icon, "img": "images/" + animal.icon + ".png"})
             }
-            
+
             // this.currentPlanets.push({"classname": "owl", "img": "images/owl.png"})
-            console.log(this.currentPlanets)
+            // console.log(this.currentPlanets)
             // }
         } else {
             console.log("no enough money")

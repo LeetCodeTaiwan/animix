@@ -56,8 +56,7 @@ export default class LeftPanelController {
     }
 
     sendMessage (event) {
-      if (event.keyCode === 13) {
-        console.log(this.messages, this.messgeToBeSend)
+      if (event.keyCode === 13 && this.messgeToBeSend !== '') {
         var req = {
             method: 'POST',
             url: '//hackntu-nodered.mybluemix.net/continue-talking/',
@@ -72,21 +71,20 @@ export default class LeftPanelController {
         };
         const messages = this.messages
         const messgeToBeSend = this.messgeToBeSend
-        console.log(messgeToBeSend)
-        this.fetch(req).then(function(response){
+        this.messages.push({
+          from: 'user',
+          text: messgeToBeSend
+        })
+        this.fetch(req).then((response) => {
             try {
-              messages.push({
-                from: 'user',
-                text: messgeToBeSend
-              })
               messages.push({
                 from: 'animal',
                 text: response.data[0]
               })
-            } catch (e) { console.log(e) }
-        }, function(err){
-            console.log(err);
-        });
+            }
+            catch (e) { console.log(e) }
+        })
+        this.messgeToBeSend = ''
       }
     }
 

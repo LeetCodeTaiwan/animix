@@ -1,7 +1,7 @@
 <div class='leftPanel'>
     <div class="ui sidebar wide inverted vertical menu" id="leftPanel">
         <div class="panelTitle">
-            <div class="leftTitle">ZOO</div>
+            <div class="leftTitle">EARTH</div>
             <!-- <i class="ui chevron left large icon cursor" ng-click="leftPanelCtrl.closePanel()"></i> -->
         </div>
         <!-- <a class="item" ng-repeat="item in leftPanelCtrl.ownAnimals">
@@ -69,26 +69,38 @@
               <div class="rightModalWrapp">
                 <div class="messageWrap">
                   <div class="messageItemWrap">
-                    <div class="messageItem" ng-repeat="msg in leftPanelCtrl.messages">
-                      <div
-                        class="messageGG"
-                        ng-class="{'userMsg': msg.from === 'user', 'animalMsg': msg.from === 'animal'}"
-                      >
-                        <div>{{msg.text}}</div>
+                    <div
+                      class="messageItem"
+                      ng-repeat="msg in leftPanelCtrl.messages"
+                      ng-class="{'userMsg': msg.from === 'user', 'animalMsg': msg.from === 'animal'}"
+                    >
+                      <div class="messageInlineWrap">
+                        <i
+                          class="ui user icon circular inverted teal"
+                          ng-show="msg.from === 'animal'"
+                          ng-class="{'animalMsgIcon': msg.from === 'animal'}"
+                        ></i>
+                        <div class="messageGGGG">{{msg.text}}</div>
+                        <i
+                          class="ui user icon circular inverted teal"
+                          ng-show="msg.from === 'user'"
+                          ng-class="{'userMsgIcon': msg.from === 'user'}"
+                        >
+                        </i>
                       </div>
                     </div>
                   </div>
-                  <div class="ui input inputMessage">
-                    <input
-                      type="text"
-                      placeholder="你想跟{{leftPanelCtrl.currentAnimal.name}}說什麼呢?"
-                      ng-model="leftPanelCtrl.messgeToBeSend"
-                      ng-keypress="leftPanelCtrl.sendMessage($event)"
-                    >
-                  </div>
                 </div>
-                <div class="ui header"><span ng-if="leftPanelCtrl.currentAnimal.sumlevels === 3">Max </span>Lv. {{leftPanelCtrl.currentAnimal.sumlevels}}</div>
+                <div class="ui input inputMessage">
+                  <input
+                  type="text"
+                  placeholder="你想跟{{leftPanelCtrl.currentAnimal.name}}說什麼呢?"
+                  ng-model="leftPanelCtrl.messgeToBeSend"
+                  ng-keypress="leftPanelCtrl.sendMessage($event)"
+                  >
+                </div>
               </div>
+            </div>
         </div>
-    </div>
+      </div>
 </div>
