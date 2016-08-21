@@ -90,8 +90,18 @@ export default class RightPanelController {
 
     buyAnimal(animal) {
         if (this.enoughDiamond(animal.cost)) {
-            this.ownAnimals.push({name:animal.name, id: animal.id, img: animal.img});
+            this.ownAnimals.push({
+                name: animal.name,
+                id: animal.id,
+                img: animal.img,
+                code: animal.code,
+                cost: animal.cost,
+                productivity: animal.productivity,
+                levels: [0, 0, 0]
+            });
             this.diamond.count -= animal.cost
+            this.diamond.total_productivity += animal.productivity
+            this.diamond.rate = this.diamond.total_productivity * this.diamond.diversity_ratio
             console.log(this.ownAnimals);
         } else {
             console.log("no enough money")
