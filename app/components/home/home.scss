@@ -96,7 +96,7 @@
     width: 50px;
     border-radius: 50%;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: auto;
@@ -248,49 +248,52 @@
 
 @keyframes lionOrbit {
     0% {
-        transform: translate(-160px, 0);
-        z-index: 10
+        transform: translate(-325px, 0);
+        z-index: 10;
     }
-    20% {
+    25% {
         z-index: -1;
     }
-    75% {
-        transform: translate(150px, 0)
+    50% {
+        transform: translate(275px, 0);
+        z-index: 10;
     }
     100% {
-        transform: translate(-160px, 0)
+        transform: translate(-325px, 0);
     }
 }
 
 @keyframes pandasOrbit {
     0% {
-        transform: translate(-140px, 0);
-        z-index: 10
+        transform: translate(-275px, 0);
+        z-index: 10;
     }
-    20% {
+    25% {
         z-index: -1;
     }
-    70% {
-        transform: translate(150px, 0)
+    50% {
+        transform: translate(225px, 0);
+        z-index: 10;
     }
     100% {
-        transform: translate(-140px, 0)
+        transform: translate(-275px, 0);
     }
 }
 
 @keyframes owlOrbit {
     0% {
-        transform: translate(-160px, 0);
-        z-index: 10
+        transform: translate(-225px, 0);
+        z-index: 10;
     }
-    20% {
-        z-index: -1;
+    25% {
+        z-index: -2;
     }
-    75% {
-        transform: translate(120px, 0)
+    50% {
+        z-index: 10;
+        transform: translate(175px, 0);
     }
     100% {
-        transform: translate(-160px, 0)
+        transform: translate(-225px, 0);
     }
 }
 
