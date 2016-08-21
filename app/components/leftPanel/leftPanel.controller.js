@@ -65,5 +65,10 @@ export default class LeftPanelController {
       //         // or server returns response with an error status.
       //         alert('http get errorCallback');
       //     });
-      }
+  }
+  renameAnimal(event) {
+    if (event.keyCode === 13) {
+      this.isEditMode = false;
+    }
+  }
 }

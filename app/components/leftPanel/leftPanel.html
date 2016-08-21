@@ -38,12 +38,16 @@
             <div class="header upgrade-modal-header">
                 動物護照
             </div>
-            <div class="image content upgrade-modal-content">
-                <div class="ui medium image">
+            <div class="image content upgrade-modal-content column">
+                <div class="ui large image">
                     <img ng-src="images/{{leftPanelCtrl.currentAnimal.img}}">
                 </div>
-                <div class="description">
-                    <div class="ui header">{{leftPanelCtrl.currentAnimal.name}}</div>
+                <div class="animal-description">
+                    <div style='display:flex;' ng-init="leftPanelCtrl.isEditMode = false">
+                        <div class="ui header" ng-hide="leftPanelCtrl.isEditMode" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode">{{leftPanelCtrl.currentAnimal.name}}</div>
+                        <input class="ui input" type="text" ng-show="leftPanelCtrl.isEditMode" ng-model="leftPanelCtrl.currentAnimal.name" ng-keypress="leftPanelCtrl.renameAnimal($event)" >
+                        <i class="ui edit icon" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode"></i>
+                    </div>
                     <div class="attribute inner">
                         <span class="left-attr-column">
                             <img class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="">

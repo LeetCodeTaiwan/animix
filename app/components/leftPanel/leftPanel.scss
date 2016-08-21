@@ -82,6 +82,13 @@
   color: $text-gray;
 }
 
+.animal-description {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
 #upgradeModal.modal {
   .upgrade-modal-header {
     background-color: #183a5d;
@@ -92,5 +99,9 @@
     .ui.header {
       color: $text-white;
     }
+  }
+  .column {
+    flex-direction: column;
+    align-items: center;
   }
 }
