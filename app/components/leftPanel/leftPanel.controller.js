@@ -51,6 +51,10 @@ export default class LeftPanelController {
             levels: [0, 0, 0]
         }
         this.fetch = $http;
+        let msgBox = document.getElementById('messageBox')
+        msgBox.addEventListener('DOMSubtreeModified', () => {
+          msgBox.scrollTop += 500
+        }, false)
     }
 
     closePanel() {
@@ -90,8 +94,7 @@ export default class LeftPanelController {
             catch (e) { console.log(e) }
         })
         this.messgeToBeSend = ''
-        const msgBox = document.getElementById('messageBox')
-        msgBox.scrollTop += 500
+
       }
     }
 
