@@ -23,22 +23,22 @@ export default class RightPanelController {
             "cost": 500,
             "productivity": 10
         }, {
-            "id": 2,
-            "code": "Viper-HP",
-            "name": "百步蛇",
-            "img": "Viper-HP-O.jpg",
-            "description": { "_id": "46", "A_Name_Ch": "百步蛇", "A_Summary": "", "A_Keywords": "", "A_AlsoKnown": "", "A_Geo": "MULTIPOINT ((121.5898494 24.9940697))", "A_Location": "兩棲爬蟲動物館", "A_POIGroup": "兩棲爬蟲動物館", "A_Name_En": "Hundred-pace Viper(Chinese Moccasin)", "A_Name_Latin": "Deinagkistrodon acutus", "A_Phylum": "脊索動物門", "A_Class": "爬蟲綱", "A_Order": "有鱗目", "A_Family": "腹蛇科", "A_Conservation": "", "A_Distribution": "臺灣東南部、越南和中國東南部和西南部，以高雄、屏東、臺東、花蓮和宜蘭山區為主", "A_Habitat": "棲息於山區進溪流處森林底層", "A_Feature": "中大型蛇類，體型粗胖，體長可達150cm，吻肛長約雌蛇尾長的6.5倍到雄蛇的7.5倍。頭呈三角形，吻端上翹，狀似枯葉，眼與鼻孔間具有頰窩。身體兩側有許多三角形的深褐色斑紋連續排列。頭頂為深褐色，並具有對稱的大型鱗片。", "A_Behavior": "以蛙類、蟾蜍、蛇類、蜥蜴、鳥類和鼠類為食，攝食策略採坐等型。卵生，多在11月到隔年3月交配，6~8月產卵，每次可產11~35枚。", "A_Diet": "", "A_Crisis": "", "A_Interpretation": "", "A_Theme_Name": "", "A_Theme_URL": "", "A_Adopt": "", "A_Code": "Viper-HP", "A_Pic01_ALT": "百步蛇", "A_Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic01.jpg", "A_Pic02_ALT": "百步蛇", "A_Pic02_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic02.jpg", "A_Pic03_ALT": "百步蛇", "A_Pic03_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic03.jpg", "A_Pic04_ALT": "百步蛇", "A_Pic04_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic04.jpg", "A_pdf01_ALT": "", "A_pdf01_URL": "", "A_pdf02_ALT": "", "A_pdf02_URL": "", "A_Voice01_ALT": "", "A_Voice01_URL": "", "A_Voice02_ALT": "", "A_Voice02_URL": "", "A_Voice03_ALT": "", "A_Voice03_URL": "", "A_Vedio_URL": "", "A_Update": "2015-11-23", "A_CID": "45" },
-            "cost": 2000,
-            "productivity": 40
-        }, {
             "id": 3,
             "code": "Owl-CS",
             "name": "領角鴞",
             "img": "Owl-CS-O.jpg",
             "description": { "_id": "258", "A_Name_Ch": "領角鴞", "A_Summary": "", "A_Keywords": "", "A_AlsoKnown": "", "A_Geo": "MULTIPOINT ((121.5799159 24.9979496))", "A_Location": "臺灣動物區", "A_POIGroup": "", "A_Name_En": "Collard Scops Owl", "A_Name_Latin": "Otus bakkamoena", "A_Phylum": "脊索動物門", "A_Class": "鳥綱", "A_Order": "鴞形目", "A_Family": "鴟鴞科", "A_Conservation": "", "A_Distribution": "", "A_Habitat": "分布於海拔1200公尺以下之森林中，及山坡地或鄉間樹木繁茂處。", "A_Feature": "體長約l9一25公分，翼長約17公分，尾長約9公分；體背灰褐色，有豎起之耳羽和不甚明顯之黑色蟲蠢珽;後頭有黃土色斑，翅膀的飛羽具有若干濃色闊價帶;顏盤灰黃色，有不規則之黑色斑紋；眉斑、眼先灰白色，盤緣黑色；尾羽灰色，有暗褐色橫帶；尾下覆羽灰白色，有黑色細斑；前頭有灰白色橫帶；胸、腹底色灰褐色，具有箭簇狀斑紋，腹部中央白色；尾羽灰褐色，有為色橫帶；嘴鉛綠色，腳灰色，趾無羽。", "A_Behavior": "為棲息於闊葉樹林中的，畫伏夜出，不易發現。但在晚間，尤其是春夏季節，可常聽其在樹上發出單調\"不一一\"的鳴叫聲，在冬季較少鳴叫。以獵捕昆蟲、小鳥和小型哺乳類為食。在臺灣則普遍棲於1,100公尺以下之闊葉林，然在非繁殖期，可在更高的山區發現其蹤跡。是典型的鄉土鳥種。", "A_Diet": "主要以弱小之哺乳類、鳥類、爬蟲類等為食。", "A_Crisis": "由於傳統迷信具有藥性，常被捕捉入藥。在公路上常見被車撞死的個體。", "A_Interpretation": "", "A_Theme_Name": "", "A_Theme_URL": "", "A_Adopt": "", "A_Code": "Owl-CS", "A_Pic01_ALT": "領角鴞", "A_Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic01.jpg", "A_Pic02_ALT": "領角鴞", "A_Pic02_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic02.jpg", "A_Pic03_ALT": "領角鴞", "A_Pic03_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic03.jpg", "A_Pic04_ALT": "領角鴞", "A_Pic04_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/FormosanArea/Owl-CS/Owl-CS_Pic04.jpg", "A_pdf01_ALT": "", "A_pdf01_URL": "", "A_pdf02_ALT": "", "A_pdf02_URL": "", "A_Voice01_ALT": "", "A_Voice01_URL": "", "A_Voice02_ALT": "", "A_Voice02_URL": "", "A_Voice03_ALT": "", "A_Voice03_URL": "", "A_Vedio_URL": "", "A_Update": "2015-11-23", "A_CID": "257" },
-            "cost": 10000,
+            "cost": 1000,
             "productivity": 200,
             "icon": "owl"
+        }, {
+            "id": 2,
+            "code": "Viper-HP",
+            "name": "百步蛇",
+            "img": "Viper-HP-O.jpg",
+            "description": { "_id": "46", "A_Name_Ch": "百步蛇", "A_Summary": "", "A_Keywords": "", "A_AlsoKnown": "", "A_Geo": "MULTIPOINT ((121.5898494 24.9940697))", "A_Location": "兩棲爬蟲動物館", "A_POIGroup": "兩棲爬蟲動物館", "A_Name_En": "Hundred-pace Viper(Chinese Moccasin)", "A_Name_Latin": "Deinagkistrodon acutus", "A_Phylum": "脊索動物門", "A_Class": "爬蟲綱", "A_Order": "有鱗目", "A_Family": "腹蛇科", "A_Conservation": "", "A_Distribution": "臺灣東南部、越南和中國東南部和西南部，以高雄、屏東、臺東、花蓮和宜蘭山區為主", "A_Habitat": "棲息於山區進溪流處森林底層", "A_Feature": "中大型蛇類，體型粗胖，體長可達150cm，吻肛長約雌蛇尾長的6.5倍到雄蛇的7.5倍。頭呈三角形，吻端上翹，狀似枯葉，眼與鼻孔間具有頰窩。身體兩側有許多三角形的深褐色斑紋連續排列。頭頂為深褐色，並具有對稱的大型鱗片。", "A_Behavior": "以蛙類、蟾蜍、蛇類、蜥蜴、鳥類和鼠類為食，攝食策略採坐等型。卵生，多在11月到隔年3月交配，6~8月產卵，每次可產11~35枚。", "A_Diet": "", "A_Crisis": "", "A_Interpretation": "", "A_Theme_Name": "", "A_Theme_URL": "", "A_Adopt": "", "A_Code": "Viper-HP", "A_Pic01_ALT": "百步蛇", "A_Pic01_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic01.jpg", "A_Pic02_ALT": "百步蛇", "A_Pic02_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic02.jpg", "A_Pic03_ALT": "百步蛇", "A_Pic03_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic03.jpg", "A_Pic04_ALT": "百步蛇", "A_Pic04_URL": "http://www.zoo.gov.tw/iTAP/03_Animals/AmphibianReptile/Viper-HP/Viper-HP_Pic04.jpg", "A_pdf01_ALT": "", "A_pdf01_URL": "", "A_pdf02_ALT": "", "A_pdf02_URL": "", "A_Voice01_ALT": "", "A_Voice01_URL": "", "A_Voice02_ALT": "", "A_Voice02_URL": "", "A_Voice03_ALT": "", "A_Voice03_URL": "", "A_Vedio_URL": "", "A_Update": "2015-11-23", "A_CID": "45" },
+            "cost": 10000,
+            "productivity": 40
         }, {
             "id": 4,
             "code": "Zebra-G",
