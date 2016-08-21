@@ -14,37 +14,16 @@
         <div class="animalList">
             <!-- <div class="animalWrap top">
             </div> -->
-
-            <div
-              class="animalWrap"
-              ng-repeat="animal in rightPanelCtrl.animals"
-              ng-click="rightPanelCtrl.buyAnimal(animal)"
-              ng-class="{'diamond-insufficient': !rightPanelCtrl.enoughDiamond(animal.cost) }"
-            >
-                <div
-                  class="rightPanelImageWrap"
-                  style="background-image: url('images/{{animal.img}}')"
-                  ng-class="{'insufImage': !rightPanelCtrl.enoughDiamond(animal.cost) }"
-                >
+            <div class="animalWrap" ng-repeat="animal in rightPanelCtrl.animals" ng-click="rightPanelCtrl.buyAnimal(animal)" ng-class="{'diamond-insufficient': !rightPanelCtrl.enoughDiamond(animal.cost) }">
+                <div class="rightPanelImageWrap" style="background-image: url('images/{{animal.img}}')" ng-class="{'insufImage': !rightPanelCtrl.enoughDiamond(animal.cost) }">
                 </div>
-                <div
-                  class="rightPhotoWrap"
-                >
-                    <div
-                      class="rightPhotoName"
-                      ng-class="{'insufName': !rightPanelCtrl.enoughDiamond(animal.cost) }"
-                    >
+                <div class="rightPhotoWrap">
+                    <div class="rightPhotoName" ng-class="{'insufName': !rightPanelCtrl.enoughDiamond(animal.cost) }">
                         {{animal.name}}
                     </div>
                     <div class="description">
-                        <i
-                          class="diamond icon right-animal-diamond"
-                          ng-class="{'insufDiamond': !rightPanelCtrl.enoughDiamond(animal.cost) }"
-                        ></i>
-                        <span
-                          class="right-animal-cost"
-                          ng-class="{'insufCost': !rightPanelCtrl.enoughDiamond(animal.cost) }"
-                        >{{animal.cost}}</span>
+                        <i class="diamond icon right-animal-diamond" ng-class="{'insufDiamond': !rightPanelCtrl.enoughDiamond(animal.cost) }"></i>
+                        <span class="right-animal-cost" ng-class="{'insufCost': !rightPanelCtrl.enoughDiamond(animal.cost) }">{{animal.cost}}</span>
                     </div>
                 </div>
                 <div class="rightActionBtnWrap">
@@ -79,5 +58,38 @@
                 </div> -->
             </div>
         </div>
+    </div>
+    <div class="ui sidebar bottom inverted vertical menu" id="bottomPanel">
+        <img style="position: relative;left: 347px;width: 740px;" ng-src="images/benson_guide.png" alt="">
+        <i class="ui close icon cursor" style="position: absolute; top: 10px;right: 360px; color: #fff" ng-click="rightPanelCtrl.closeGuide()"></i>
+    </div>
+
+    <div class="ui modal" id="KPModal">
+        <i class="close icon"></i>
+        <div class="header">
+            遊戲導覽
+        </div>
+        <div class="image content">
+            <div class="ui medium image">
+                <img ng-src="/images/kp.png">
+            </div>
+            <div class="description" style="color: black!important;">
+                <div class="ui header">歡迎來到動物方程式。</div>
+                <p style="color: black!important;">在這個世界你將探索不同瀕臨絕種動物，了解他們的特性，並用生命水晶來孕育不同的動物。更多資訊請上<a href="http://www.zoo.gov.tw/" target="_blank">台北市動物園網站</a>觀看閱讀。</p>
+                <p style="color: black!important;">生命水晶：可用於孕育動物</p>
+                <p style="color: black!important;">水晶生成速率：動物水晶 X 生物多樣性</p>
+
+                <!-- <p>Is it okay to use this photo?</p> -->
+            </div>
+        </div>
+        <!-- <div class="actions">
+            <div class="ui black deny button">
+                Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+                Yep, that's me
+                <i class="checkmark icon"></i>
+            </div>
+        </div> -->
     </div>
 </div>
