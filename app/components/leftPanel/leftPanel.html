@@ -76,7 +76,7 @@
                     >
                       <div class="messageInlineWrap">
                         <i
-                          class="ui user icon circular inverted teal"
+                          class="ui drupal icon circular inverted orange"
                           ng-show="msg.from === 'animal'"
                           ng-class="{'animalMsgIcon': msg.from === 'animal'}"
                         ></i>
@@ -93,10 +93,10 @@
                 </div>
                 <div class="ui input inputMessage">
                   <input
-                  type="text"
-                  placeholder="你想跟{{leftPanelCtrl.currentAnimal.name}}說什麼呢?"
-                  ng-model="leftPanelCtrl.messgeToBeSend"
-                  ng-keypress="leftPanelCtrl.sendMessage($event)"
+                    type="text"
+                    placeholder="你想跟{{leftPanelCtrl.currentAnimal.name}}說什麼呢?"
+                    ng-model="leftPanelCtrl.messgeToBeSend"
+                    ng-keypress="leftPanelCtrl.sendMessage($event, leftPanelCtrl.currentAnimal)"
                   >
                 </div>
               </div>

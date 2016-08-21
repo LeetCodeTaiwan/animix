@@ -95,6 +95,7 @@ export default class RightPanelController {
         }
         if (this.enoughDiamond(animal.cost)) {
             this.ownAnimals.unshift({
+                uuid: this.ownAnimals.length,
                 name: animal.name,
                 id: animal.id,
                 img: animal.img,

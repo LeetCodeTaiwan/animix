@@ -55,7 +55,7 @@ export default class LeftPanelController {
         $('#leftPanel').sidebar('hide')
     }
 
-    sendMessage (event) {
+    sendMessage (event, currentAnimal) {
       if (event.keyCode === 13 && this.messgeToBeSend !== '') {
         var req = {
             method: 'POST',
@@ -71,13 +71,16 @@ export default class LeftPanelController {
         };
         const messages = this.messages
         const messgeToBeSend = this.messgeToBeSend
+        const threadId = currentAnimal.uuid
         this.messages.push({
+          threadId,
           from: 'user',
           text: messgeToBeSend
         })
         this.fetch(req).then((response) => {
             try {
               messages.push({
+                threadId,
                 from: 'animal',
                 text: response.data[0]
               })
@@ -111,6 +114,7 @@ export default class LeftPanelController {
         this.fetch(req).then(function(response){
           try {
             messages.push({
+              threadId: animal.uuid,
               from: 'animal',
               text: response.data[0]
             })
