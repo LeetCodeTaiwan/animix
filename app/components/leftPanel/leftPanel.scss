@@ -101,7 +101,49 @@
     }
   }
   .column {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
+}
+
+.leftModalWrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightModalWrapp {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.messageWrap {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 400px;
+  margin: 20px 10px;
+  border: 2px solid #EFEFEF;
+  border-radius: 8px;
+}
+
+.userMsg {
+  display: flex;
+  justify-content: flex-end;
+}
+.animalMsg {
+  display: flex;
+  justify-content: flex-start;
+}
+.messageItemWrap {
+  padding: 25px;
+  font-size: 20px;
+}
+
+.inputMessage {
+  justify-content: flex-end;
+  position: absolute !important;
+  bottom: 47px;
+  width: 400px;
 }

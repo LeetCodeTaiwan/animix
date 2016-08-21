@@ -39,31 +39,56 @@
                 動物護照
             </div>
             <div class="image content upgrade-modal-content column">
-                <div class="ui large image">
-                    <img ng-src="{{leftPanelCtrl.getMixImageUrl(leftPanelCtrl.currentAnimal) }}">
-                </div>
-                <div class="animal-description">
-                    <div style='display:flex;margin-top: 30px;' ng-init="leftPanelCtrl.isEditMode = false">
-                        <div class="ui header" ng-hide="leftPanelCtrl.isEditMode" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode">{{leftPanelCtrl.currentAnimal.name}}</div>
-                        <input class="ui input" type="text" ng-show="leftPanelCtrl.isEditMode" ng-model="leftPanelCtrl.currentAnimal.name" ng-keypress="leftPanelCtrl.renameAnimal($event)" >
-                        <i class="ui edit icon" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode"></i>
+              <div class="leftModalWrapp">
+                  <div class="ui large image">
+                      <img ng-src="{{leftPanelCtrl.getMixImageUrl(leftPanelCtrl.currentAnimal) }}">
+                  </div>
+                  <div class="animal-description">
+                      <div style='display:flex;margin-top: 30px;' ng-init="leftPanelCtrl.isEditMode = false">
+                          <div class="ui header" ng-hide="leftPanelCtrl.isEditMode" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode">{{leftPanelCtrl.currentAnimal.name}}</div>
+                          <input class="ui input" type="text" ng-show="leftPanelCtrl.isEditMode" ng-model="leftPanelCtrl.currentAnimal.name" ng-keypress="leftPanelCtrl.renameAnimal($event)" >
+                          <i class="ui edit icon" ng-click="leftPanelCtrl.isEditMode = !leftPanelCtrl.isEditMode"></i>
+                      </div>
+                      <div class="attribute inner">
+                          <span class="left-attr-column">
+                              <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(0)">
+                              <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[0]}}</span>
+                          </span>
+                          <span class="left-attr-column">
+                              <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/ztfDn80.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(1)">
+                              <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[1]}}</span>
+                          </span>
+                          <span class="left-attr-column">
+                              <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(2)">
+                              <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[2]}}</span>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="ui header"><span ng-if="leftPanelCtrl.currentAnimal.sumlevels === 3">Max </span>Lv. {{leftPanelCtrl.currentAnimal.sumlevels}}</div>
+              </div>
+              <div class="rightModalWrapp">
+                <div class="messageWrap">
+                  <div class="messageItemWrap">
+                    <div class="messageItem" ng-repeat="msg in leftPanelCtrl.messages">
+                      <div
+                        class="messageGG"
+                        ng-class="{'userMsg': msg.from === 'user', 'animalMsg': msg.from === 'animal'}"
+                      >
+                        <div>{{msg.text}}</div>
+                      </div>
                     </div>
-                    <div class="attribute inner">
-                        <span class="left-attr-column">
-                            <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/7XAsKFu.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(0)">
-                            <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[0]}}</span>
-                        </span>
-                        <span class="left-attr-column">
-                            <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/ztfDn80.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(1)">
-                            <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[1]}}</span>
-                        </span>
-                        <span class="left-attr-column">
-                            <img ng-class="{'cursor': leftPanelCtrl.currentAnimal.sumlevels !== 3}" class="attr-icon" src="//i.imgur.com/qJHPUlh.png" alt="" ng-click="leftPanelCtrl.upgradeAnimal(2)">
-                            <span class="left-attr-number">{{leftPanelCtrl.currentAnimal.levels[2]}}</span>
-                        </span>
-                    </div>
+                  </div>
+                  <div class="ui input inputMessage">
+                    <input
+                      type="text"
+                      placeholder="你想跟{{leftPanelCtrl.currentAnimal.name}}說什麼呢?"
+                      ng-model="leftPanelCtrl.messgeToBeSend"
+                      ng-keypress="leftPanelCtrl.sendMessage($event)"
+                    >
+                  </div>
                 </div>
                 <div class="ui header"><span ng-if="leftPanelCtrl.currentAnimal.sumlevels === 3">Max </span>Lv. {{leftPanelCtrl.currentAnimal.sumlevels}}</div>
+              </div>
         </div>
     </div>
 </div>

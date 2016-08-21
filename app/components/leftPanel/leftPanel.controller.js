@@ -1,6 +1,8 @@
 export default class LeftPanelController {
     constructor(animals, diamond, $http) {
         this.diamond = diamond
+        this.messages = []
+        this.messgeToBeSend = ''
         this.zooItems = [{
             "id": 0,
             "code": "cat",
@@ -53,6 +55,41 @@ export default class LeftPanelController {
         $('#leftPanel').sidebar('hide')
     }
 
+    sendMessage (event) {
+      if (event.keyCode === 13) {
+        console.log(this.messages, this.messgeToBeSend)
+        var req = {
+            method: 'POST',
+            url: '//hackntu-nodered.mybluemix.net/continue-talking/',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+            },
+            data: {
+                "userInput": this.messgeToBeSend
+            }
+        };
+        const messages = this.messages
+        const messgeToBeSend = this.messgeToBeSend
+        console.log(messgeToBeSend)
+        this.fetch(req).then(function(response){
+            try {
+              messages.push({
+                from: 'user',
+                text: messgeToBeSend
+              })
+              messages.push({
+                from: 'animal',
+                text: response.data[0]
+              })
+            } catch (e) { console.log(e) }
+        }, function(err){
+            console.log(err);
+        });
+      }
+    }
+
     openUpgradeModal(animal) {
         this.currentAnimal = animal;
         this.currentAnimal.sumlevels = this.currentAnimal.levels[0] + this.currentAnimal.levels[1] + this.currentAnimal.levels[2];
@@ -71,24 +108,18 @@ export default class LeftPanelController {
             }
         };
 
-        
+
+        const messages = this.messages
         this.fetch(req).then(function(response){
-            console.log(response);
+          try {
+            messages.push({
+              from: 'animal',
+              text: response.data[0]
+            })
+          } catch (e) { console.log(e) }
         }, function(err){
             console.log(err);
         });
-        // fetch({
-        //         method: 'POST',
-        //         url: 'http://hackntu-nodered.mybluemix.net/start-talking'
-        //     }).then(function successCallback(response) {
-        //         // this callback will be called asynchronously
-        //         // when the response is available
-        //         console.log(response);
-        //     }, function errorCallback(response) {
-        //         // called asynchronously if an error occurs
-        //         // or server returns response with an error status.
-        //         alert('http get errorCallback');
-        //     });
     }
 
     continueDialog(userInput){
