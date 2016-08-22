@@ -1,6 +1,7 @@
 # Animix
 
 > A web game to train your own neuro-style monster
+
 > Created at HackNTU 2016 hackthon
 
 ## See our demo
