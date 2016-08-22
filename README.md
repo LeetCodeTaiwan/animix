@@ -25,6 +25,6 @@ sh deploy.sh
 MIT
 
 ## Credit
-[angular-starter-es6-webpack](https://github.com/TheLarkInn/angular-starter-es6-webpack)
-[weather-icons](http://codepen.io/motorlatitude/pen/CyqDf)
-[animated-earth](http://codepen.io/orrybaram/pen/NqvVeX)
+- [angular-starter-es6-webpack](https://github.com/TheLarkInn/angular-starter-es6-webpack)
+- [weather-icons](http://codepen.io/motorlatitude/pen/CyqDf)
+- [animated-earth](http://codepen.io/orrybaram/pen/NqvVeX)
