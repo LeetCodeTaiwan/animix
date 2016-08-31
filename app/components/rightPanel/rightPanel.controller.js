@@ -80,18 +80,18 @@ export default class RightPanelController {
 
     checkInfo(animal) {
         this.currentAnimal = animal
-        $('#infoModal')
-            .modal('show');
+        $('#infoModal').modal('show')
+        setTimeout(()=>$('#infoModal').modal('refresh'), 800)
         // console.log($('#infoModal'))
     }
 
     buyAnimal(animal) {
         if (this.ownAnimals.length === 0) {
             $('#bottomPanel')
-            .sidebar('setting', 'dimPage', false)
-            // .sidebar('setting', 'closable', false)
-            .sidebar('setting', 'transition', 'overlay')
-            .sidebar('toggle')
+                .sidebar('setting', 'dimPage', false)
+                // .sidebar('setting', 'closable', false)
+                .sidebar('setting', 'transition', 'overlay')
+                .sidebar('toggle')
         }
         if (this.enoughDiamond(animal.cost)) {
             this.ownAnimals.unshift({
@@ -107,13 +107,13 @@ export default class RightPanelController {
             this.diamond.count -= animal.cost
             this.diamond.total_productivity += animal.productivity
             this.diamond.rate = this.diamond.total_productivity * this.diamond.diversity_ratio
-            // console.log(this.ownAnimals);
+                // console.log(this.ownAnimals);
 
             // let planet_num = this.ownAnimals.length
             // console.log(planet_num)
             // if (planet_num === 1 && planet_num < 4) {
             if (animal.icon) {
-                this.currentPlanets.push({"classname": animal.icon, "img": "images/" + animal.icon + ".png"})
+                this.currentPlanets.push({ "classname": animal.icon, "img": "images/" + animal.icon + ".png" })
             }
 
             // this.currentPlanets.push({"classname": "owl", "img": "images/owl.png"})

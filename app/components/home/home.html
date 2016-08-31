@@ -8,8 +8,8 @@
 				></i>
 				<div>{{homeCtrl.diamond.count | number: 0}}</div>
 			</div>
-			<div style="color: rgba(255, 255, 255, 0.5); font-size: 24px;">
-				Rate: {{homeCtrl.diamond.rate | number: 1}}
+			<div style="color: rgba(255, 255, 255, 0.5); font-size: 18px;">
+				生命水晶生成速率：<span style="font-size: 22px;">{{homeCtrl.diamond.rate | number: 0}} / sec</span>
 			</div>
 		</div>
 	</div>
@@ -21,6 +21,7 @@
         </div>
 
 		<div class="thunder-wrap">
+			<h1 class="thunder-score">+{{homeCtrl.diamond.rate | number: 0}}</h1>
 			<div class="thunder"></div>
 		</div>
 		<!--
