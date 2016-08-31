@@ -1,6 +1,6 @@
 <div class="rightPanelWrap">
     <div class="iconWrap">
-        <i class="power icon big rightIcons" ng-click="rightPanelCtrl.togglePanels()"></i>
+        <i class="power icon big rightIcons" id="startup" ng-click="rightPanelCtrl.togglePanels()"></i>
         <!-- <i class="user icon big white rightIcons"></i>
         <i class="lemon icon big white rightIcons"></i>
         <i class="cube icon big white rightIcons"></i>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="rightActionBtnWrap">
-                    <i class="ui circle info icon cursor big right-animal-info" ng-click="rightPanelCtrl.checkInfo(animal); $event.stopPropagation();"></i>
+                    <i class="ui circle info icon big right-animal-info" ng-click="rightPanelCtrl.checkInfo(animal); $event.stopPropagation();" ng-if="rightPanelCtrl.enoughDiamond(animal.cost)"></i>
                 </div>
             </div>
             <div class="ui modal" id="infoModal">
@@ -36,15 +36,15 @@
                     動物護照
                 </div>
                 <div class="image content info-modal-content">
-                    <div class="ui medium image">
+                    <div class="ui huge image">
                         <img ng-src="images/{{rightPanelCtrl.currentAnimal.img}}">
                     </div>
                     <div class="description">
-                        <div class="ui header">{{rightPanelCtrl.currentAnimal.name}}</div>
-                        <div class="ui header">{{rightPanelCtrl.currentAnimal.description.A_Location}}</div>
-                        <div class="ui header">{{rightPanelCtrl.currentAnimal.description.A_Class}}</div>
-                        <div class="ui header">{{rightPanelCtrl.currentAnimal.description.A_Phylum}}</div>
-                        <div class="ui header">{{rightPanelCtrl.currentAnimal.description.A_Feature}}</div>
+                        <div class="ui header">名稱：{{rightPanelCtrl.currentAnimal.name}}</div>
+                        <div class="ui header">分布：{{rightPanelCtrl.currentAnimal.description.A_Location}}</div>
+                        <div class="ui header" ng-if="rightPanelCtrl.currentAnimal.description.A_Class+rightPanelCtrl.currentAnimal.description.A_Phylum!=''">種類：{{rightPanelCtrl.currentAnimal.description.A_Class}} {{rightPanelCtrl.currentAnimal.description.A_Phylum}}</div>
+                        <div class="ui header">習性：{{rightPanelCtrl.currentAnimal.description.A_Behavior}}</div>
+                        <div class="ui header">特性：{{rightPanelCtrl.currentAnimal.description.A_Feature}}</div>
                     </div>
                 </div>
                 <!-- <div class="actions">
@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="ui sidebar bottom inverted vertical menu" id="bottomPanel" style="background-color: #262626;">
-        <img style="position: relative;left: 347px;width: 640px;" ng-src="images/benson_guide.png" alt="">
+        <img style="position: relative;left: 347px;width: 600px;" ng-src="images/benson_guide.png" alt="">
         <i class="ui close icon cursor" style="position: absolute; top: 10px;right: 360px; color: #fff" ng-click="rightPanelCtrl.closeGuide()"></i>
     </div>
 
