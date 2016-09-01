@@ -17,7 +17,10 @@ npm run dev
 ## Build for Production
 ```
 npm run build
-// or
+```
+
+## Deployment
+```
 sh deploy.sh
 ```
 
